@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   modern_warfare_7.h                                 :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 10:17:55 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 10:17:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
-
-#include "../mlx_linux/mlx.h"
-#include "parsing.h"
-#include "utils.h"
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef UTILS_H
+#define UTILS_H
 #include <stdbool.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#include <unistd.h>
+
+char	**split(char *str);
+
+char	*strdup_select(char *str, char c);
+
+void	*free_split(char **tab, char *str);
+
+size_t	count_words(char *str, char c);
+size_t	ft_strlen(char *str);
+size_t	filelen(int fd);
+
+int		print_error(char *str);
+
+bool	compare_extension(char *s1, char *s2);
+
+void	putchar_stderr(char c);
 
 #endif

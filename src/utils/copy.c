@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count.c                                            :+:      :+:    :+:   */
+/*   copy.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 06:04:36 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 07:00:46 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/03 07:15:58 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 10:12:06 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-size_t	ft_strlen(char *str)
+char	*strdup_select(char *str, char c)
 {
-	size_t	ret;
+	size_t	ct;
+	char	*ret;
 
-	ret = 0;
-	while (str[ret] != '\0')
-		++ret;
-	return (ret);
-}
-
-size_t	filelen(int fd)
-{
-	size_t	ret;
-	char	c;
-
-	while (read(fd, &c, 1))
-		++ret;
-	close(fd);
+	ct = 0;
+	while (str[ct] != '\0' && str[ct] != c)
+		ct++;
+	ret = malloc(sizeof(char) * ct + 1);
+	if (ret == NULL)
+		return (NULL);
+	ct = 0;
+	while (str[ct] != '\0' && str[ct] != c)
+	{
+		ret[ct] = str[ct];
+		ct++;
+	}
+	ret[ct] = '\0';
 	return (ret);
 }

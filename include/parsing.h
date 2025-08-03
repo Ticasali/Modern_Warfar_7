@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_arg.c                                        :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 05:32:55 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 06:36:35 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/03 10:02:30 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 10:08:02 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+#ifndef PARSING_H
+#define PARSING_H
+#include <stdbool.h>
 
-bool	check_arg(int ac, char **av)
+typedef	struct	s_data
 {
-	if (ac != 2)
-		return (false);
-	if (check_cub_extension(av[1]) == false)
-		return (false);
-	return (true);
-}
+	unsigned char	*north;
+	unsigned char	*south;
+	unsigned char	*west;
+	unsigned char	*east;
+	unsigned char	*floor;
+	unsigned char	*sky;
+	char			**map;
+}	t_data;
 
-bool	check_cub_extension(char *str)
-{
-	size_t	ct;
+char	**check_file(char *pathname);
 
-	ct = 0;
-	while (str[ct] != '\0')
-	{
-		if (str[ct] == '.')
-			if (compare_extension(&str[ct], ".cub") == true)
-				return (true);
-		++ct;
-	}
-	return (false);
-}
+bool	check_parsing(char *pathname, t_data *data);
+bool	check_arg(int ac, char **av);
+bool	check_cub_extension(char *str);
+
+#endif

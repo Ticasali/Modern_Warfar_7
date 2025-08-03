@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   count.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/03 06:04:36 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 10:10:34 by ticasali         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/modern_warfare_7.h"
+
+size_t	count_words(char *str, char c)
+{
+	size_t	ret;
+	size_t	ct;
+	size_t	check;
+
+	ct = 0;
+	ret = 0;
+	check = 0;
+	while (str[ct] != '\0')
+	{
+		if (str[ct] == c)
+		{
+			while (str[ct] == c)
+				ct++;
+			check = 0;
+		}
+		if (str[ct] != c && str[ct] != '\0')
+		{
+			if (check == 0)
+				ret++;
+			while (str[ct] != c && str[ct] != '\0')
+				ct++;
+			check = 1;
+		}
+	}
+	return (ret);
+}
+
+size_t	ft_strlen(char *str)
+{
+	size_t	ret;
+
+	ret = 0;
+	while (str[ret] != '\0')
+		++ret;
+	return (ret);
+}
+
+size_t	filelen(int fd)
+{
+	size_t	ret;
+	char	c;
+
+	while (read(fd, &c, 1))
+		++ret;
+	close(fd);
+	return (ret);
+}

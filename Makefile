@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/03 06:11:04 by ticasali         ###   ########.fr        #
+#    Updated: 2025/08/03 10:16:30 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,16 @@ MLX			=		libmlx_Linux.a
 
 DIR_SRCS 	=		src
 
-SRCS		=		src/check_arg.c		\
-					src/compare.c		\
-					src/count.c			\
-					src/error.c			\
-					src/main.c			\
+SRCS		=		src/main.c						\
+													\
+					src/parsing/check_arg.c			\
+					src/parsing/check_parsing.c		\
+													\
+					src/utils/compare.c				\
+					src/utils/copy.c				\
+					src/utils/count.c				\
+					src/utils/error.c				\
+					src/utils/split.c				\
 
 DIR_OBJS 	=		.objs
 

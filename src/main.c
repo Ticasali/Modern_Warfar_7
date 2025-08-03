@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 06:38:38 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/03 10:18:31 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		main(int ac, char **av)
 	t_data	data;
 
 	if (check_arg(ac, av) == true)
-		return (error("Error\n Bad Arguments\n"));
-	if (check_parsing(av, &data) == false)
-		return (error("Error\n Bad Data\n"));
+		return (print_error("Error\n Bad Arguments\n"));
+	if (check_parsing(av[1], &data) == false)
+		return (print_error("Error\n Bad Data\n"));
 }
