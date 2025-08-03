@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_arg.c                                        :+:      :+:    :+:   */
+/*   compare.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 05:32:55 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 06:10:00 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/03 06:04:14 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 06:10:08 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-bool	check_arg(int ac, char **av)
-{
-	if (ac != 2)
-		return (false);
-	if (check_cub_extension(av[1]) == false)
-		return (false);
-	return (true);
-}
-
-bool	check_cub_extension(char *str)
+bool	compare_extension(char *s1, char *s2)
 {
 	size_t	ct;
 
 	ct = 0;
-	while (str[ct] != '\0')
+	if (ft_strlen(s1) != 4)
+		return (false);
+	while (s1[ct] != '\0')
 	{
-		if (str[ct] == '.')
-			if (comapre_extension(&str[ct], ".cub") == true)
-				return (true);
+		if (s1[ct] != s2[ct])
+			return (false);
 		++ct;
 	}
-	return (false);
+	return (true);
 }
