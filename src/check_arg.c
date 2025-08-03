@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 05:32:55 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 06:10:00 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/03 06:36:35 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ bool	check_cub_extension(char *str)
 	while (str[ct] != '\0')
 	{
 		if (str[ct] == '.')
-			if (comapre_extension(&str[ct], ".cub") == true)
+			if (compare_extension(&str[ct], ".cub") == true)
 				return (true);
 		++ct;
 	}
