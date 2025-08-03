@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   modern_warfare_7.h                                 :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 05:39:41 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/03 05:19:27 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/03 05:28:31 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
+#include "../include/modern_warfare_7.h"
 
-#include <unistd.h>
-#include <../mlx_linux/mlx.h>
-#include <stdbool.h>
-
-typedef	struct	s_data
+void	ft_putchar_stderr(char c)
 {
-	unsigned char	*no;
-	unsigned char	*so;
-	unsigned char	*we;
-	unsigned char	*ea;
-	unsigned char	*f;
-	unsigned char	*c;
-	char			**map;
-}	t_data;
+	write(2, &c, 1);
+}
 
-#endif
+int		error(char *str)
+{
+	size_t	ct;
+
+	ct = 0;
+	while (str[ct] != '\0')
+	{
+		ft_putchar_stderr(str[ct]);
+		++ct;
+	}
+	return (-1);
+}
