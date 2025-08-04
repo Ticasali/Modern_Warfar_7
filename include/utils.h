@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 23:45:22 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:43:02 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char			**split(char *str);
 
 char			*strdup_select(char *str, char c);
 
-void			*free_split(char **tab, char *str);
+void			*free_tab(char **tab, char *str);
 void			*load_image(t_window *win, char *path, int x, int y);
 
 size_t			get_pixel_img(t_trspy tr, int x, int y);

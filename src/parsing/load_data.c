@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 16:11:30 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:14:25 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:49:09 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ t_data	*load_data(char **file, t_control *ctrl)
 	data->south = load_data_sprite(file, "SO", ctrl);
 	data->west = load_data_sprite(file, "WE", ctrl);
 	data->east = load_data_sprite(file, "EA", ctrl);
-	data->floor = load_data_color(file, "F");
-	data->sky = load_data_color(file, "C");
-//	data->map = get_map(file);
+	data->floor = load_data_color(file, 'F');
+	data->sky = load_data_color(file, 'C');
+	data->map = get_map(file);
 	if (check_all_data(data) == false)
 		return (NULL);
 	return (data);
@@ -43,9 +43,10 @@ void	*load_data_sprite(char **map, char const *to_find, t_control *ctrl)
 			return (pars_line_for_image(map[y], ctrl->win));
 		++y;
 	}
+	return (NULL);
 }
 
-void	*load_data_color(char **map, char to_find)
+unsigned char	*load_data_color(char **map, char to_find)
 {
 	size_t	y;
 
@@ -56,4 +57,5 @@ void	*load_data_color(char **map, char to_find)
 			return (pars_line_for_color(map[y]));
 		++y;
 	}
+	return (NULL);
 }

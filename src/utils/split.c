@@ -6,14 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 09:22:01 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:16:49 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:43:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 #include "../include/utils.h"
 
-void	*free_split(char **tab, char *str)
+void	*free_tab(char **tab, char *str)
 {
 	size_t	ct;
 

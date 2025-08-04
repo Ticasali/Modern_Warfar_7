@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:42:01 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:09:15 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:44:27 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*free_window(t_window *wind)
 	return (wind);
 }
 
-bool	load_window(void)
+t_window	*load_window(void)
 {
 	t_window	*wind;
 

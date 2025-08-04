@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:23:21 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:45:23 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "../include/utils.h"
 #include "../include/parsing.h"
 #include "../include/render.h"
-
 
 int	main(int ac, char **av)
 {
@@ -27,7 +26,7 @@ int	main(int ac, char **av)
 		return (-1);
 	ctrl->win = load_window();
 	if (ctrl->win == NULL)
-		return (NULL);	//Turbo Free
+		return (-1);	//Turbo Free
 	if (check_parsing(av[1], ctrl) == false)
 		return (print_error("Error\n Bad Data\n"));
 	if (load_structure(ctrl) == false)

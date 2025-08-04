@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/05 00:20:51 by ticasali         ###   ########.fr        #
+#    Updated: 2025/08/05 00:42:00 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS		=		src/main.c						\
 													\
 					src/parsing/check_arg.c			\
 					src/parsing/check_parsing.c		\
+					src/parsing/get_map.c			\
 					src/parsing/load_data.c			\
 					src/parsing/pars_data_line.c	\
 					src/parsing/secure_load_data.c	\
@@ -50,6 +51,7 @@ SRCS		=		src/main.c						\
 					src/utils/count.c				\
 					src/utils/error.c				\
 					src/utils/get_time.c			\
+					src/utils/load_image.c			\
 					src/utils/split.c				\
 					src/utils/transparency.c		\
 
