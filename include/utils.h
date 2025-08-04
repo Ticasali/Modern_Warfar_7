@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:02:02 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:01:07 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 #define UTILS_H
 # include <stdbool.h>
 # include <unistd.h>
+
+typedef struct Trspy_s
+{
+	int		y;
+	int		x;
+	char	*addr;
+	int		bpp;
+	int		endian;
+	int		line_len;
+}	t_Trspy;
 
 char	**split(char *str);
 

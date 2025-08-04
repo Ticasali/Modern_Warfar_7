@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_render.c                                      :+:      :+:    :+:   */
+/*   move_player.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 15:37:38 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 18:55:00 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/04 18:44:08 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/04 18:46:23 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-int		game_render(t_control *ctrl)
+void	move_player(t_player *play)
 {
-	move_player(ctrl->player);
-	display__map(ctrl);
-	display_player_in_map(ctrl);
+	if (play->m_back == true)
+		++play->y;
+	if (play->m_front == true)
+		--play->y;
+	if (play->m_left == true)
+		--play->x;
+	if (play->m_right == true)
+		++play->x;
 }
