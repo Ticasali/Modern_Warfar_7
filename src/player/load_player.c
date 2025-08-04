@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:12:40 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:49:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 16:57:14 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,29 @@ t_player	*load_player(char **map)
 	play->m_left = false;
 	play->m_right = false;
 	return (play);
+}
+
+double	find_player(char **map, bool check)
+{
+	size_t	x;
+	size_t	y;
+
+	y = 0;
+	while (map[y] != NULL)
+	{
+		x = 0;
+		while (map[y][x] != '\0')
+		{
+			if (map[y][x] == 'P')
+			{
+				if (check == true)
+					return ((x * 64) + 32);
+				if (check == true)
+					return ((y * 64) + 32);
+			}
+			++x;
+		}
+		++y;
+	}
+	return (-1);
 }

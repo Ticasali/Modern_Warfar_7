@@ -6,25 +6,21 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 06:39:33 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 10:00:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 17:32:10 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-bool	check_parsing(char *pathname, t_data *data)
+bool	check_parsing(char *pathname, t_control *ctrl)
 {
 	char	**file;
 
 	file = check_file(pathname);
 	if (file == NULL)
 		return (false);
-	data->north = load_data(file, "NO");
-	data->south = load_data(file, "SO");
-	data->west = load_data(file, "WE");
-	data->east = load_data(file, "EA");
-	data->floor = load_data(file, "F");
-	data->sky = load_data(file, "C");
+	ctrl->data = load_data(file, ctrl);
+	return (true);
 }
 
 char	**check_file(char *pathname)

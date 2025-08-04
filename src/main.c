@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 14:58:29 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 17:10:05 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ int		main(int ac, char **av)
 	ctrl = malloc(sizeof(t_control));
 	if (ctrl == NULL)
 		return (-1);
-	if (check_parsing(av[1], &ctrl->data) == false)
+	ctrl->win = load_window();
+	if (ctrl->win == NULL)
+		return (NULL);	//Turbo Free
+	if (check_parsing(av[1], ctrl) == false)
 		return (print_error("Error\n Bad Data\n"));
 	if (load_structure(ctrl) == false)
 		return (print_error("Error\n Bad Data\n"));

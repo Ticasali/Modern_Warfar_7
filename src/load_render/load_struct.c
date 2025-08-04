@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:43:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:14:59 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 17:09:01 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 bool	load_structure(t_control *ctrl)
 {
-	ctrl->win = load_window();
-	if (ctrl->win == NULL)
-		return (NULL);	//Turbo Free
 	ctrl->player = load_player(ctrl->data->map);
 	if (ctrl->player == NULL)
 		return (NULL); //Turbo Free
