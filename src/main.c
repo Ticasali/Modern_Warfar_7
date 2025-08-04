@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:58 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 11:36:20 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 int		main(int ac, char **av)
 {
-//	t_data	data;
+	t_control	*ctrl;
 
-//	if (check_arg(ac, av) == true)
-//		return (print_error("Error\n Bad Arguments\n"));
-//	if (check_parsing(av[1], &data) == false)
-//		return (print_error("Error\n Bad Data\n"));
+	if (check_arg(ac, av) == true)
+		return (print_error("Error\n Bad Arguments\n"));
+	ctrl = malloc(sizeof(t_control));
+	if (ctrl == NULL)
+		return (-1);
+	if (check_parsing(av[1], &ctrl->data) == false)
+		return (print_error("Error\n Bad Data\n"));
+	if (load_structure(ctrl) == false)
+		return (print_error("Error\n Bad Data\n"));
 }
