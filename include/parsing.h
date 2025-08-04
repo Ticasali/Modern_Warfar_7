@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:02:30 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 16:16:02 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 15:02:05 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSING_H
 #define PARSING_H
-#include <stdbool.h>
+# include <stdbool.h>
 
 typedef	struct	s_data
 {

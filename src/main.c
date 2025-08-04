@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 11:36:20 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 14:58:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int		main(int ac, char **av)
 		return (print_error("Error\n Bad Data\n"));
 	if (load_structure(ctrl) == false)
 		return (print_error("Error\n Bad Data\n"));
+	game(ctrl);
 }

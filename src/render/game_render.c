@@ -1,23 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_struct.c                                      :+:      :+:    :+:   */
+/*   game_render.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 10:43:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:14:59 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/04 15:37:38 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/04 15:37:58 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-bool	load_structure(t_control *ctrl)
-{
-	ctrl->win = load_window();
-	if (ctrl->win == NULL)
-		return (NULL);	//Turbo Free
-	ctrl->player = load_player(ctrl->data->map);
-	if (ctrl->player == NULL)
-		return (NULL); //Turbo Free
-}

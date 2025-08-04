@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_struct.c                                      :+:      :+:    :+:   */
+/*   player.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 10:43:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:14:59 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/04 15:08:57 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/04 15:25:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+#ifndef	PLAYER_H
+#define	PLAYER_H
 
-bool	load_structure(t_control *ctrl)
+typedef struct	s_player
 {
-	ctrl->win = load_window();
-	if (ctrl->win == NULL)
-		return (NULL);	//Turbo Free
-	ctrl->player = load_player(ctrl->data->map);
-	if (ctrl->player == NULL)
-		return (NULL); //Turbo Free
-}
+	double	x;
+	double	y;
+	bool	m_front;
+	bool	m_back;
+	bool	m_left;
+	bool	m_right;
+}	t_player;
+
+#endif

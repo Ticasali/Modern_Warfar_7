@@ -6,14 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 10:17:33 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 15:02:02 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 #define UTILS_H
-#include <stdbool.h>
-#include <unistd.h>
+# include <stdbool.h>
+# include <unistd.h>
 
 char	**split(char *str);
 
