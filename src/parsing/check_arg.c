@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 05:32:55 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 10:18:56 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:09 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
+# include "../include/parsing.h"
 
 bool	check_arg(int ac, char **av)
 {

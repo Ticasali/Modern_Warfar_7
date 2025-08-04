@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:12:40 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 16:57:14 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:46 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/player.h"
 
 t_player	*load_player(char **map)
 {
@@ -28,7 +29,7 @@ t_player	*load_player(char **map)
 	return (play);
 }
 
-double	find_player(char **map, bool check)
+double	find_player_pos(char **map, bool check)
 {
 	size_t	x;
 	size_t	y;

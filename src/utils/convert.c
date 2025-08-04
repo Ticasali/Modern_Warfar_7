@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:32:43 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 18:31:07 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:16:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+
 
 double	atod(char *str)
 {

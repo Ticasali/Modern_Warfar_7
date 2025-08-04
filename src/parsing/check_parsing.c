@@ -6,11 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 06:39:33 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 18:35:31 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:18 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
+# include "../include/parsing.h"
+# include "../include/utils.h"
 
 bool	check_parsing(char *pathname, t_control *ctrl)
 {

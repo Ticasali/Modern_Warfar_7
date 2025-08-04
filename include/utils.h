@@ -6,24 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:57:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 23:45:22 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 #define UTILS_H
-# include <stdbool.h>
-# include <unistd.h>
-
-typedef struct trspy_s
-{
-	int		y;
-	int		x;
-	char	*addr;
-	int		bpp;
-	int		endian;
-	int		line_len;
-}	t_trspy;
+# include "modern_warfare_7.h"
 
 t_trspy			load_transparency(void *ptr, int x, int y);
 

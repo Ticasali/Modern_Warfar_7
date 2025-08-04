@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pars_line_for_data.c                               :+:      :+:    :+:   */
+/*   pars_data_line.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:05:15 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 18:26:32 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
+# include "../include/parsing.h"
+# include "../include/utils.h"
 
 void	*pars_line_for_image(char *line_to_pars, t_window *win)
 {

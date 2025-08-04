@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:32:10 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 11:53:55 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:16:39 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/utils.h"
 
 double	get_time(void)
 {

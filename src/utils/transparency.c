@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:59:32 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:58:11 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:17:44 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,19 @@ size_t	get_pixel_img(t_trspy tr, int x, int y)
 {
 	return (*(size_t *)((tr.addr
 			+ (y * tr.line_len) + (x * tr.bpp / 8))));
+}
+
+void	put_pixel_img(t_trspy img, int x, int y, int color)
+{
+	char	*dst;
+
+	if (color == (int)0xFF000000)
+		return ;
+	if (x >= 0 && y >= 0 && x < img.x && y < img.y)
+	{
+		dst = img.addr + (y * img.line_len + x * (img.bpp / 8));
+		*(unsigned int *) dst = color;
+	}
 }
 
 void	put_img_to_img(t_trspy dst, t_trspy src, int x, int y)
@@ -34,19 +47,6 @@ void	put_img_to_img(t_trspy dst, t_trspy src, int x, int y)
 			j++;
 		}
 		i++;
-	}
-}
-
-void	put_pixel_img(t_trspy img, int x, int y, int color)
-{
-	char	*dst;
-
-	if (color == (int)0xFF000000)
-		return ;
-	if (x >= 0 && y >= 0 && x < img.x && y < img.y)
-	{
-		dst = img.addr + (y * img.line_len + x * (img.bpp / 8));
-		*(unsigned int *) dst = color;
 	}
 }
 

@@ -6,24 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:02:30 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:54:02 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 23:43:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSING_H
 #define PARSING_H
-# include <stdbool.h>
-
-typedef	struct	s_data
-{
-	void			*north;
-	void 			*south;
-	void			*west;
-	void			*east;
-	unsigned char	*floor;
-	unsigned char	*sky;
-	char			**map;
-}	t_data;
+# include "modern_warfare_7.h"
 
 t_data			*load_data(char **file, t_control *ctrl);
 

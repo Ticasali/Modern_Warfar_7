@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 16:11:30 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:40:44 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:25 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
+# include "../include/parsing.h"
 
 t_data	*load_data(char **file, t_control *ctrl)
 {
@@ -25,7 +26,7 @@ t_data	*load_data(char **file, t_control *ctrl)
 	data->east = load_data_sprite(file, "EA", ctrl);
 	data->floor = load_data_color(file, "F");
 	data->sky = load_data_color(file, "C");
-	data->map = get_map(file);
+//	data->map = get_map(file);
 	if (check_all_data(data) == false)
 		return (NULL);
 	return (data);

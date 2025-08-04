@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:47:05 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 18:58:33 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:21:15 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/render.h"
 
 void	display_map(t_control *ctrl)
 {

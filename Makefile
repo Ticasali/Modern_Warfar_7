@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/04 19:49:22 by ticasali         ###   ########.fr        #
+#    Updated: 2025/08/05 00:20:51 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,19 @@ NAME		=		Modern_Warfare_7
 MLXDIR		= 		mlx_linux/
 MLX			=		libmlx_Linux.a
 
-DIR_SRCS 	=		src
+DIR_SRCS 	=		src				\
+					src/load_render	\
+					src/multiplayer	\
+					src/parsing		\
+					src/render		\
+					src/utils		\
 
 SRCS		=		src/main.c						\
 													\
 					src/load_render/load_struct.c	\
 					src/load_render/load_window.c	\
 													\
-					src/multiplayer.c				\
+					src/multiplayer/multiplayer.c	\
 													\
 					src/parsing/check_arg.c			\
 					src/parsing/check_parsing.c		\
@@ -58,9 +63,9 @@ CFLAGS		= 		-Wextra -Wall -Werror
 
 all:	$(NAME)
 
-$(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c include/modern_warfare_7.h 
+$(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c modern_warfare_7.h
 					@mkdir -p $(dir $@)
-					$(CC) $(CFLAGS) -c $< -o $@ -I./include
+					$(CC) $(CFLAGS) -c $< -o $@ -I ./include
 
 $(NAME): $(OBJS) $(MLXDIR)$(MLX)
 	$(CC) $(OBJS) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)

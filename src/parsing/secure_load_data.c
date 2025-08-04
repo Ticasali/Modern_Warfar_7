@@ -6,11 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:31:26 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 17:35:05 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 00:14:39 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
+# include "../include/parsing.h"
+
 
 bool	check_all_data(t_data *data)
 {
