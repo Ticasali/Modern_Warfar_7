@@ -6,20 +6,20 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:59:32 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:01:09 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:58:11 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
 
-size_t	get_pixel_img(t_Trspy tr, int x, int y)
+size_t	get_pixel_img(t_trspy tr, int x, int y)
 {
 	return (*(size_t *)((tr.addr
 			+ (y * tr.line_len) + (x * tr.bpp / 8))));
 }
 
-void	put_img_to_img(t_Trspy dst, t_Trspy src, int x, int y)
+void	put_img_to_img(t_trspy dst, t_trspy src, int x, int y)
 {
 	int	i;
 	int	j;
@@ -37,7 +37,7 @@ void	put_img_to_img(t_Trspy dst, t_Trspy src, int x, int y)
 	}
 }
 
-void	put_pixel_img(t_Trspy img, int x, int y, int color)
+void	put_pixel_img(t_trspy img, int x, int y, int color)
 {
 	char	*dst;
 
@@ -50,9 +50,9 @@ void	put_pixel_img(t_Trspy img, int x, int y, int color)
 	}
 }
 
-t_Trspy	load_transparency(void *ptr, int x, int y)
+t_trspy	load_transparency(void *ptr, int x, int y)
 {
-	t_Trspy	tr;
+	t_trspy	tr;
 
 	tr.addr = mlx_get_data_addr(ptr, &(tr.bpp), &(tr.line_len), &(tr.endian));
 	tr.y = y;

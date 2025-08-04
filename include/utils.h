@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 19:01:07 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:57:48 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdbool.h>
 # include <unistd.h>
 
-typedef struct Trspy_s
+typedef struct trspy_s
 {
 	int		y;
 	int		x;
@@ -23,22 +23,33 @@ typedef struct Trspy_s
 	int		bpp;
 	int		endian;
 	int		line_len;
-}	t_Trspy;
+}	t_trspy;
 
-char	**split(char *str);
+t_trspy			load_transparency(void *ptr, int x, int y);
 
-char	*strdup_select(char *str, char c);
+char			**split(char *str);
 
-void	*free_split(char **tab, char *str);
+char			*strdup_select(char *str, char c);
 
-size_t	count_words(char *str, char c);
-size_t	ft_strlen(char *str);
-size_t	filelen(int fd);
+void			*free_split(char **tab, char *str);
+void			*load_image(t_window *win, char *path, int x, int y);
 
-int		print_error(char *str);
+size_t			get_pixel_img(t_trspy tr, int x, int y);
+size_t			count_words(char *str, char c);
+size_t			ft_strlen(char *str);
+size_t			filelen(int fd);
 
-bool	compare_extension(char *s1, char *s2);
+double			atod(char *str);
+double			get_time(void);
 
-void	putchar_stderr(char c);
+int				print_error(char *str);
+
+unsigned char	atorgb(char *str);
+
+bool			compare_extension(char *s1, char *s2);
+
+void			put_pixel_img(t_trspy img, int x, int y, int color);
+void			put_img_to_img(t_trspy dst, t_trspy src, int x, int y);
+void			putchar_stderr(char c);
 
 #endif

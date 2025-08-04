@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:08:57 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:25:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:54:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,9 @@ typedef struct	s_player
 	bool	m_left;
 	bool	m_right;
 }	t_player;
+
+t_player	*load_player(char **map);
+
+double	find_player(char **map, bool check);
 
 #endif

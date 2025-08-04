@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:42:01 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 11:43:42 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:50:39 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-void	*free_window(t_window	*wind)
+void	*free_window(t_window *wind)
 {
 	if (wind == NULL)
 		return (NULL);
