@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   modern_warfare_7.h                                 :+:      :+:    :+:   */
+/*   get_time.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:41 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/04 10:32:10 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/04 10:33:17 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
+#include "../include/modern_warfare_7.h"
 
-#include "../mlx_linux/mlx.h"
-#include "parsing.h"
-#include "utils.h"
-#include "render.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+double	get_time(void)
+{
+	char	*str_time;
+	double	ret;
+	int		fd;
 
-#endif
+	str_time = malloc(sizeof(char) * 11);
+	if (str_time == NULL)
+		return (-1);
+	fd = open("/proc/uptime", O_RDONLY);
+	if (fd <= 0)
+	{
+		free(str_time);
+		return (-1);
+	}
+	read(fd, str_time, 10);
+	ret = atod(str_time);
+	if (close(fd) == -1)
+		return (-1);
+	free(str_time);
+	return (ret);
+}

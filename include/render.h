@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   modern_warfare_7.h                                 :+:      :+:    :+:   */
+/*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:41 by ticasali         ###   ########.fr       */
+/*   Created: 2025/08/04 10:34:03 by ticasali          #+#    #+#             */
+/*   Updated: 2025/08/04 10:36:15 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
+#ifndef RENDER_H
+#define RENDER_H
 
-#include "../mlx_linux/mlx.h"
-#include "parsing.h"
-#include "utils.h"
-#include "render.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+typedef struct	s_window
+{
+	void	*ml;
+	void	*win;
+}	t_window;
 
 #endif
