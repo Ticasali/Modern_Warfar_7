@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/05 00:42:00 by ticasali         ###   ########.fr        #
+#    Updated: 2025/08/05 03:25:28 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ OBJS 		=		$(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
 CC			=		cc
 
-CFLAGS		= 		-Wextra -Wall -Werror
+CFLAGS		= 		-Wextra -Wall -Werror -O3 -g3
 
 all:	$(NAME)
 

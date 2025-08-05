@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:18:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:15:24 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:22:50 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int		key_pressed_game(int keycode, t_control *ctrl)
 		return (-1);
 	}
 	if (keycode == XK_w)
-		ctrl->player->m_front = false;
+		ctrl->player->m_front = true;
 	if (keycode == XK_a)
-		ctrl->player->m_left = false;
+		ctrl->player->m_left = true;
 	if (keycode == XK_s)
-		ctrl->player->m_back = false;
+		ctrl->player->m_back = true;
 	if (keycode == XK_d)
-		ctrl->player->m_right = false;
+		ctrl->player->m_right = true;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 06:39:33 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:14:18 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:07:55 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ bool	check_parsing(char *pathname, t_control *ctrl)
 	char	**file;
 
 	file = check_file(pathname);
+	for(int i = 0; file[i] != NULL; i++)
+		printf("%s\n", file[i]);
 	if (file == NULL)
 		return (false);
 	ctrl->data = load_data(file, ctrl);

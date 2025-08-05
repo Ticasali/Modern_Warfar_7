@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:47:05 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:21:15 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:14:25 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	display_map(t_control *ctrl)
 					ctrl->data->north, x * 64, y * 64);
 			if (ctrl->data->map[y][x] == '0')
 				mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
-					ctrl->data->south, x * 64, y * 64);
+					ctrl->data->west, x * 64, y * 64);
 			++x;
 		}
 		++y;
@@ -39,6 +39,6 @@ void	display_map(t_control *ctrl)
 void	display_player_in_map(t_control *ctrl)
 {
 	mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
-					ctrl->data->east,
+					ctrl->data->south,
 					ctrl->player->x * 64, ctrl->player->y * 64);
 }

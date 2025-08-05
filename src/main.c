@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:45:23 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:05:21 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 {
 	t_control	*ctrl;
 
-	if (check_arg(ac, av) == true)
+	if (check_arg(ac, av) == false)
 		return (print_error("Error\n Bad Arguments\n"));
 	ctrl = malloc(sizeof(t_control));
 	if (ctrl == NULL)

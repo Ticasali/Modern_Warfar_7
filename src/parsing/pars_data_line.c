@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:05:15 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:14:33 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:11:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ unsigned char	*pars_line_for_color(char *line_to_pars)
 	unsigned char	*ret;
 
 	ret = malloc(sizeof(unsigned char) * 3);
+	ret[0] = 0;
+	ret[1] = 100;
+	ret[2] = 255;
+	return (ret);
+	// DEBUG FUTUR A FAIRE
 	if (ret == NULL)
 		return (NULL);
 	size_t	x = 1;
