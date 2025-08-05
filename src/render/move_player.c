@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:44:08 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 03:25:27 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 03:59:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 void	move_player(t_player *play)
 {
 	if (play->m_back == true)
-	{
-		printf("TEST\n");
 		play->y += 0.01;
-	}
 	if (play->m_front == true)
 		play->y -= 0.01;
 	if (play->m_left == true)

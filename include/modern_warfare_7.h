@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:04:12 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/05 04:00:10 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <math.h>
 
 typedef struct trspy_s
 {
@@ -50,6 +51,9 @@ typedef struct	s_player
 {
 	double	x;
 	double	y;
+	double	xa;
+	double	ya;
+	double	angle;
 	bool	m_front;
 	bool	m_back;
 	bool	m_left;
