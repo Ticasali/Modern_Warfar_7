@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/05 03:25:28 by ticasali         ###   ########.fr        #
+#    Updated: 2025/08/06 13:59:28 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ OBJS 		=		$(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
 CC			=		cc
 
-CFLAGS		= 		-Wextra -Wall -Werror -O3 -g3
+CFLAGS		= 		-Wextra -Wall -Werror -g3 -O3
 
 all:	$(NAME)
 
@@ -70,7 +70,7 @@ $(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c modern_warfare_7.h
 					$(CC) $(CFLAGS) -c $< -o $@ -I ./include
 
 $(NAME): $(OBJS) $(MLXDIR)$(MLX)
-	$(CC) $(OBJS) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+	$(CC) $(OBJS) -g3 -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
 
 $(MLXDIR)$(MLX):
 	@$(MAKE) -s -C $(MLXDIR)

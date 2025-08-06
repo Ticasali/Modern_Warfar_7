@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 06:04:36 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/03 10:10:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/06 14:04:40 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ size_t	filelen(int fd)
 {
 	size_t	ret;
 	char	c;
+	ret = 0;
 
 	while (read(fd, &c, 1))
 		++ret;
