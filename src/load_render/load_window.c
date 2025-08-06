@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:42:01 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:44:27 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/06 16:22:12 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_window	*load_window(void)
 	wind->ml = mlx_init();
 	if (wind->ml == NULL)
 		return (free_window(wind));
-	wind->win = mlx_new_window(wind->ml, 3072, 1728, "Mordern Warfare 7");	//1728
+	wind->win = mlx_new_window(wind->ml, 2072, 1428, "Mordern Warfare 7");	//1728
 	if (wind->win == NULL)
 		return (free_window(wind));
 	return (wind);

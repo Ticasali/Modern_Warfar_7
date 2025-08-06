@@ -6,11 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:44:08 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:42:21 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/06 15:54:54 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/modern_warfare_7.h"
+# include "../include/modern_warfare_7.h"
 
 void	move_player(t_player *play)
 {
