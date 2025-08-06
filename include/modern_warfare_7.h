@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 14:01:50 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/06 15:10:10 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,17 @@ typedef	struct	s_data
 
 typedef struct	s_player
 {
-	double	x;
-	double	y;
-	double	xa;
-	double	ya;
+	double	pos_x;
+	double	pos_y;
+	double	delta_x;
+	double	delta_y;
 	double	angle;
 	bool	m_front;
 	bool	m_back;
 	bool	m_left;
 	bool	m_right;
+	bool	t_right;
+	bool	t_left;
 }	t_player;
 
 
