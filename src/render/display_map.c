@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:47:05 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 03:14:25 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/08/07 13:11:10 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ void	display_player_in_map(t_control *ctrl)
 {
 	mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
 					ctrl->data->south,
-					ctrl->player->x * 64, ctrl->player->y * 64);
+					ctrl->player->pos_x * 10, ctrl->player->pos_y * 10);
 }
