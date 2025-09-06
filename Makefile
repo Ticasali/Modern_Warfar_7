@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/06 13:59:28 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/06 10:21:23 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ DIR_SRCS 	=		src				\
 					src/multiplayer	\
 					src/parsing		\
 					src/render		\
+					src/turbolibx	\
 					src/utils		\
 
 SRCS		=		src/main.c						\
@@ -45,15 +46,18 @@ SRCS		=		src/main.c						\
 					src/render/key_release.c		\
 					src/render/move_player.c		\
 													\
+					src/turbolibx/draw_line.c		\
+					src/turbolibx/load_image.c		\
+					src/turbolibx/reset_window.c	\
+					src/turbolibx/transparency.c	\
+													\
 					src/utils/compare.c				\
 					src/utils/convert.c				\
 					src/utils/copy.c				\
 					src/utils/count.c				\
 					src/utils/error.c				\
 					src/utils/get_time.c			\
-					src/utils/load_image.c			\
 					src/utils/split.c				\
-					src/utils/transparency.c		\
 
 DIR_OBJS 	=		.objs
 

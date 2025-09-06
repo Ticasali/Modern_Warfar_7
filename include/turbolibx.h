@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   turbolibx.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/06 09:34:53 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/06 09:37:48 by ticasali         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef TURBOLIBX_H
+#define TURBOLIBX_H
+# include "modern_warfare_7.h"
+
+t_trspy	load_transparency(void *ptr, int x, int y);
+
+void	*load_image(t_window *win, char *path, int x, int y);
+void	*load_image_free_path(t_window *win, char *path, int x, int y);
+
+size_t	get_pixel_img(t_trspy tr, int x, int y);
+
+int		mlx_reset(t_xvar *xvar);
+
+void	mlx_draw_line(t_window *window, double x_start, double x_end,
+		double y_start, double y_end);
+void	put_pixel_img(t_trspy img, int x, int y, int color);
+void	put_img_to_img(t_trspy dst, t_trspy src, int x, int y);
+
+#endif

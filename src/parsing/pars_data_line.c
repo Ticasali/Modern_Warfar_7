@@ -6,13 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:05:15 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/07 13:17:18 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/06 10:26:09 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 # include "../include/parsing.h"
 # include "../include/utils.h"
+# include "../include/turbolibx.h"
 
 void	*pars_line_for_image(char *line_to_pars, t_window *win)
 {
