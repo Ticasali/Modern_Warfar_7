@@ -1,0 +1,33 @@
+MENU
+
+PAGE PRINCIPAL
+Fond Animée
+3 button animée
+-Solo
+-Multi
+-Quitter
+
+PAGE SOLO
+Fond Animée
+4 button animée
+-New Game
+-Continue
+-Settings
+-Menu Principal
+
+PAGE SETTINGS
+Scrolling bar
+Button Clickable for change Keys
+-Avancer
+-Reculer
+-Left
+-Rigth
+-Tirer
+-Arme 1
+-Arme 2
+-etc Arme
+2 Scrolling Bar horizontal
+-Sound Effect
+-Musique
+Button Clickable
+-Sauvegarder
