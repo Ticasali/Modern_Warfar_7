@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:10:10 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/06 12:31:17 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ typedef struct trspy_s
 	int		line_len;
 }	t_trspy;
 
+typedef	struct	anim_s
+{
+	int		x;
+	int		y;
+	int		frame;
+	char	*path;
+}	t_anim;
 
 typedef	struct	s_data
 {
