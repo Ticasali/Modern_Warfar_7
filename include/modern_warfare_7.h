@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/07 13:01:53 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/08 07:59:03 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,26 +44,17 @@ typedef	struct	s_anim
 	char	*path;
 }	t_anim;
 
-typedef	struct	s_home_menu
+typedef	struct	s_button
 {
-	
-}	t_home_menu;
-
-typedef	struct	s_setting_menu
-{
-	
-}	t_setting_menu;
-
-typedef	struct	s_solo_menu
-{
-	
-}	t_solo_menu;
-
-typedef	struct	s_multi_menu
-{
-	
-}	t_multi_menu;
-
+	void			**sprite;
+	int				x;
+	int				y;
+	int				height;
+	int				lenght;
+	int				frame;
+	char			*name;
+	struct s_button	*next;
+}	t_button;
 
 typedef	struct	s_data
 {
@@ -98,11 +89,21 @@ typedef struct	s_window
 	void	*win;
 }	t_window;
 
+typedef	struct	s_menu
+{
+	int			statement;
+	void		**bakcground;
+	t_button	*button;
+}	t_menu;
+
 typedef struct	s_control
 {
 	t_window	*win;
 	t_data		*data;
 	t_player	*player;
+	t_menu		*home;
+	t_menu		*setting;
+	t_menu		*solo;
 }	t_control;
 
 #endif

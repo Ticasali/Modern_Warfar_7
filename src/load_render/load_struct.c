@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:43:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:46:40 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/08 08:00:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ bool	load_structure(t_control *ctrl)
 {
 	ctrl->player = load_player(ctrl->data->map);
 	if (ctrl->player == NULL)
+		return (false); //Turbo Free
+	ctrl->home = load_home(ctrl->win);
+	if (ctrl->home == NULL)
 		return (false); //Turbo Free
 	return (true);
 }
