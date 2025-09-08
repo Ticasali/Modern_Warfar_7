@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 09:13:01 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/08 10:44:14 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,15 @@ typedef struct trspy_s
 	int		line_len;
 }	t_trspy;
 
-typedef	struct	s_anim
+typedef	struct	s_anim_loader
 {
 	int		x;
 	int		y;
 	int		frame;
 	char	*path;
-}	t_anim;
+}	t_anim_loader;
 
-typedef	struct	s_button
+typedef	struct	s_anim
 {
 	void			**sprite;
 	int				x;
@@ -53,8 +53,9 @@ typedef	struct	s_button
 	int				lenght;
 	int				frame;
 	char			*name;
-	struct s_button	*next;
-}	t_button;
+	bool			fly;
+	struct s_anim	*next;
+}	t_anim;
 
 typedef	struct	s_data
 {
@@ -92,9 +93,8 @@ typedef struct	s_window
 typedef	struct	s_menu
 {
 	int			statement;
-	void		**background;
-	int			frame_bakcground;
-	t_button	*button;
+	t_anim		*back;
+	t_anim		*button;
 }	t_menu;
 
 typedef struct	s_control

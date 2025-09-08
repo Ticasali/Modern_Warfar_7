@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_home.c                                        :+:      :+:    :+:   */
+/*   load_back.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 08:47:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 10:50:23 by ticasali         ###   ########.fr       */
+/*   Created: 2025/09/08 10:23:13 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/08 10:41:42 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
-# include "../include/turbolibx.h"
 
-t_menu	*load_home(t_window *win)
+t_anim	*load_background_home(t_window *win, t_anim_loader loader)
 {
-	t_menu			*home;
+	t_anim	*back;
 
-	home = malloc(sizeof(t_menu));
-	if (home == NULL)
+	back = malloc(sizeof(t_anim));
+	back->sprite = load_aniamtion(win, loader);
+	if (back->sprite == NULL)
 		return (NULL);
-	home->statement = 0;
-	home->back = load_background_home(win,
-			anim_loader(1200, 600, 6, "./texture/home"));
+	back->x = 0;
+	back->y = 0;
+	back->lenght = loader.x;
+	back->height	= loader.y;
+	back->frame = loader.frame;
+	back->name = "background";
+	back->fly = false;
+	back->next = NULL;
+	return (back);
 }
