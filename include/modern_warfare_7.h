@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 07:59:03 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/08 09:13:01 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,8 @@ typedef struct	s_window
 typedef	struct	s_menu
 {
 	int			statement;
-	void		**bakcground;
+	void		**background;
+	int			frame_bakcground;
 	t_button	*button;
 }	t_menu;
 

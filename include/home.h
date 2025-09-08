@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   home_menu.h                                        :+:      :+:    :+:   */
+/*   home.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/07 12:25:59 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/07 12:47:28 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/08 08:48:11 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HOME_MENU_H
-#define HOME_MENU_H
+#ifndef HOME_H
+#define HOME_H
 # include "modern_warfare_7.h"
 
 #endif
