@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_home.c                                        :+:      :+:    :+:   */
+/*   load_setting.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 08:47:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 12:57:37 by ticasali         ###   ########.fr       */
+/*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/08 13:08:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 # include "../include/turbolibx.h"
 
-t_home	*load_home(t_window *win)
+t_setting	*load_setting(t_window *win)
 {
-	t_home	*home;
+	t_setting	*setting;
 
-	home = malloc(sizeof(t_home));
-	if (home == NULL)
+	setting = malloc(sizeof(t_setting));
+	if (setting == NULL)
 		return (NULL);
-	home->statement = 0;
-	home->time = 0;
-	home->background = load_animation_struct(win,
+	setting->statement = 0;
+	setting->time = 0;
+	setting->background = load_animation_struct(win,
 			anim_loader(1200, 600, 6, "./texture"), 0, 0);
-	home->solo	= load_animation_struct(win,
+	setting->button	= load_animation_struct(win,
 			anim_loader(300, 100, 6, "./texture"), 300, 200);
-	home->multi	= load_animation_struct(win,
-			anim_loader(300, 100, 6, "./texture"), 300, 400);
-	home->quit = load_animation_struct(win,
-			anim_loader(300, 100, 6, "./texture"), 300, 600);
 }

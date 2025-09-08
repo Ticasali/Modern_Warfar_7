@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_back.c                                        :+:      :+:    :+:   */
+/*   mouse_input_setting.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 10:23:13 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 10:41:42 by ticasali         ###   ########.fr       */
+/*   Created: 2025/09/08 13:06:08 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/08 13:08:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 
-t_anim	*load_background_home(t_window *win, t_anim_loader loader)
+int	mouse_input_setting(int button, int x, int y, t_control *ctrl)
 {
-	t_anim	*back;
-
-	back = malloc(sizeof(t_anim));
-	back->sprite = load_aniamtion(win, loader);
-	if (back->sprite == NULL)
-		return (NULL);
-	back->x = 0;
-	back->y = 0;
-	back->lenght = loader.x;
-	back->height	= loader.y;
-	back->frame = loader.frame;
-	back->name = "background";
-	back->fly = false;
-	back->next = NULL;
-	return (back);
+	if (button == 1)
+	{
+		if ((x >= 500 && x <= 600) && (y >= 150 && y <= 200))
+			ctrl->setting->statement = 1;
+		if ((x >= 500 && x <= 600) && (y >= 250 && y <= 300))
+			ctrl->setting->statement = 2;
+		if ((x >= 500 && x <= 600) && (y >= 350 && y <= 400))
+			ctrl->setting->statement = 3;
+	}
+	return (0);
 }

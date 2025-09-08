@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   home_loop.c                                        :+:      :+:    :+:   */
+/*   setting_loop.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/06 12:17:44 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 13:10:01 by ticasali         ###   ########.fr       */
+/*   Created: 2025/09/08 13:04:36 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/08 13:09:37 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 
-void	home_loop(t_control *ctrl)
+void	setting_loop(t_control *ctrl)
 {
-	mlx_hook(ctrl->win->win, 2, 1L<<0, escape_touch_home, ctrl);
-	mlx_hook(ctrl->win->win, ButtonPress, ButtonPressMask, mouse_input_home, ctrl);
-	mlx_loop_hook(ctrl->win->ml, home_render, ctrl);
+	mlx_hook(ctrl->win->win, 2, 1L<<0, escape_touch_setting, ctrl);
+	mlx_hook(ctrl->win->win, ButtonPress, ButtonPressMask, mouse_input_setting, ctrl);
+	mlx_loop_hook(ctrl->win->ml, setting_render, ctrl);
 	mlx_loop(ctrl->win->ml);
-	if (ctrl->home->statement == 1)
+	if (ctrl->setting->statement == 1)
 	{
 		mlx_reset(ctrl->win->ml);
 		mlx_clear_window(ctrl->win->ml, ctrl->win->win);
@@ -26,16 +26,16 @@ void	home_loop(t_control *ctrl)
 	}
 //	if (menu->statement == 2)
 //		Multi Menu
-	if (ctrl->home->statement == 3)
+	if (ctrl->setting->statement == 3)
 	{
 		//Astro free
 		return ;
 	}
 }
 
-int		escape_touch_home(int keycode, t_control *ctrl)
+int		escape_touch_setting(int keycode, t_control *ctrl)
 {
 	if (keycode == XK_Escape)
-		ctrl->home->statement = 3;
+		ctrl->setting->statement = 3;
 	return (0);
 }
