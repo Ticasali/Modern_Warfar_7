@@ -6,11 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:59:12 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 12:03:20 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:05:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
+# include "../include/home.h"
+# include "../include/turbolibx.h"
 
 void	menu_animation_button(t_control *ctrl)
 {

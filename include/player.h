@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:08:57 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:23:22 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:09:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,10 @@
 t_player	*load_player(char **map);
 
 double	find_player_pos(char **map, bool check);
+
+void	move_player_front_back(t_player *play);
+void	move_player_left_right(t_player *play);
+void	move_player_rotate(t_player *play);
+void	move_player(t_player *play);
 
 #endif

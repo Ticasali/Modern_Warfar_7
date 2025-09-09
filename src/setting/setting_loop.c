@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:04:36 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 13:09:37 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:11:24 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
+# include "../include/setting.h"
 
 void	setting_loop(t_control *ctrl)
 {

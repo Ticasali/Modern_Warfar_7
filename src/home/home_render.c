@@ -6,11 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 12:47:38 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/08 17:56:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:06:49 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
+# include "../include/utils.h"
+# include "../include/home.h"
+# include "../include/turbolibx.h"
 
 int	home_render(t_control *ctrl)
 {

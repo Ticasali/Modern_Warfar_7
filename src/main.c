@@ -6,14 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 13:56:53 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:01:15 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 #include "../include/utils.h"
 #include "../include/parsing.h"
-#include "../include/render.h"
+#include "../include/game.h"
 
 int	main(int ac, char **av)
 {
