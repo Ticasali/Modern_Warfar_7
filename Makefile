@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/09/06 10:21:23 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/09 13:56:48 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,48 +16,73 @@ MLXDIR		= 		mlx_linux/
 MLX			=		libmlx_Linux.a
 
 DIR_SRCS 	=		src				\
-					src/load_render	\
+					src/game		\
+					src/home		\
+					src/load_game	\
 					src/multiplayer	\
 					src/parsing		\
-					src/render		\
+					src/player		\
+					src/raycasting	\
+					src/setting		\
+					src/solo		\
 					src/turbolibx	\
 					src/utils		\
 
-SRCS		=		src/main.c						\
-													\
-					src/load_render/load_struct.c	\
-					src/load_render/load_window.c	\
-													\
-					src/multiplayer/multiplayer.c	\
-													\
-					src/parsing/check_arg.c			\
-					src/parsing/check_parsing.c		\
-					src/parsing/get_map.c			\
-					src/parsing/load_data.c			\
-					src/parsing/pars_data_line.c	\
-					src/parsing/secure_load_data.c	\
-													\
-					src/player/load_player.c		\
-													\
-					src/render/display_map.c		\
-					src/render/game_loop.c			\
-					src/render/game_render.c		\
-					src/render/key_pressed.c		\
-					src/render/key_release.c		\
-					src/render/move_player.c		\
-													\
-					src/turbolibx/draw_line.c		\
-					src/turbolibx/load_image.c		\
-					src/turbolibx/reset_window.c	\
-					src/turbolibx/transparency.c	\
-													\
-					src/utils/compare.c				\
-					src/utils/convert.c				\
-					src/utils/copy.c				\
-					src/utils/count.c				\
-					src/utils/error.c				\
-					src/utils/get_time.c			\
-					src/utils/split.c				\
+SRCS		=		src/main.c							\
+														\
+					src/game/display_map.c				\
+					src/game/game_loop.c				\
+					src/game/game_render.c				\
+					src/game/key_pressed.c				\
+					src/game/key_release.c				\
+														\
+					src/home/home_button.c				\
+					src/home/home_loop.c				\
+					src/home/home_render.c				\
+					src/home/load_home.c				\
+					src/home/mouse_input_home.c			\
+														\
+					src/load_game/load_struct.c			\
+					src/load_game/load_window.c			\
+														\
+					src/multiplayer/multiplayer.c		\
+														\
+					src/parsing/check_arg.c				\
+					src/parsing/check_parsing.c			\
+					src/parsing/get_map.c				\
+					src/parsing/load_data.c				\
+					src/parsing/pars_data_line.c		\
+					src/parsing/secure_load_data.c		\
+														\
+					src/player/load_player.c			\
+					src/player/move_player.c			\
+														\
+					src/raycasting/raycasting.c			\
+														\
+					src/setting/setting_loop.c			\
+					src/setting/setting_render.c		\
+					src/setting/load_setting.c			\
+					src/setting/mouse_input_setting.c	\
+														\
+					src/solo/solo_loop.c				\
+					src/solo/solo_render.c				\
+					src/solo/load_solo.c				\
+					src/solo/mouse_input_solo.c			\
+														\
+					src/turbolibx/animation_frame.c		\
+					src/turbolibx/draw_line.c			\
+					src/turbolibx/load_animation.c		\
+					src/turbolibx/load_image.c			\
+					src/turbolibx/reset_window.c		\
+					src/turbolibx/transparency.c		\
+														\
+					src/utils/compare.c					\
+					src/utils/convert.c					\
+					src/utils/copy.c					\
+					src/utils/count.c					\
+					src/utils/error.c					\
+					src/utils/get_time.c				\
+					src/utils/split.c					\
 
 DIR_OBJS 	=		.objs
 
