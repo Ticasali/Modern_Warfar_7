@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:11:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:12:29 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:43:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
+# include "../include/utils.h"
 
 int	solo_render(t_control *ctrl)
 {

@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 09:34:53 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:13:40 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:57:40 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	**load_animation(t_window *win, t_anim_loader anim);
 
 void	*load_image(t_window *win, char *path, int x, int y);
 void	*load_image_free_path(t_window *win, char *path, int x, int y);
+
+char	*concat_animation_path(char *path, size_t num);
 
 size_t	get_pixel_img(t_trspy tr, int x, int y);
 

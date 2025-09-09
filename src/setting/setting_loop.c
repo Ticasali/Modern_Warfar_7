@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:04:36 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:11:24 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:46:01 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
+# include "../include/turbolibx.h"
 # include "../include/setting.h"
 
 void	setting_loop(t_control *ctrl)
@@ -23,7 +24,7 @@ void	setting_loop(t_control *ctrl)
 	{
 		mlx_reset(ctrl->win->ml);
 		mlx_clear_window(ctrl->win->ml, ctrl->win->win);
-		load_new_game(ctrl);
+//		load_new_game(ctrl);
 	}
 //	if (menu->statement == 2)
 //		Multi Menu

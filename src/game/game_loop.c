@@ -6,12 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 17:59:00 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:03:29 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:40:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
-#include "game.h"
+#include "../include/game.h"
 
 void	game(t_control	*ctrl)
 {

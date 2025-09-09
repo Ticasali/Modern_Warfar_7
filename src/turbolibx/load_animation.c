@@ -6,12 +6,38 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 12:21:14 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:13:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 14:59:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 # include "../include/turbolibx.h"
+# include "../include/utils.h"
+
+
+char	*concat_animation_path(char *path, size_t num)
+{
+	char	*ret;
+	size_t	ct;
+
+	ct = 0;
+	ret = malloc(sizeof(char) * ft_strlen(path) + 50);
+	if (ret == NULL)
+		return (NULL);
+	while (path[ct] != '\0')
+	{
+		ret[ct] = path[ct];
+		++ct;
+	}
+	ret[ct] = '_';
+	while (num > 10)
+	{
+		ret[++ct] = (num % 10) + 48;
+		num /= 10;
+	}
+	ret[++ct] = '\0';
+	return (ret);
+}
 
 t_anim_loader	anim_loader(int x, int y, int frame, char *path)
 {
