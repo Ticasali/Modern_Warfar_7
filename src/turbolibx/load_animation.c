@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 12:21:14 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:59:33 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 17:23:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,17 @@ char	*concat_animation_path(char *path, size_t num)
 		ret[ct] = path[ct];
 		++ct;
 	}
-	ret[ct] = '_';
-	while (num > 10)
+	ret[ct] = '-';
+	while (num >= 10)
 	{
-		ret[++ct] = (num % 10) + 48;
-		num /= 10;
+		ret[++ct] = (num / count_expand(num)) + 48;
+		num = num % 10;
 	}
+	ret[++ct] = num + 48;
+	ret[++ct] = '.';
+	ret[++ct] = 'x';
+	ret[++ct] = 'p';
+	ret[++ct] = 'm';
 	ret[++ct] = '\0';
 	return (ret);
 }
@@ -57,12 +62,12 @@ void	**load_animation(t_window *win, t_anim_loader anim)
 	size_t	ct;
 
 	ct = 0;
-	ret = malloc(sizeof(void *) * anim.frame);
+	ret = malloc(sizeof(void *) * anim.frame + 8);
 	if (ret == NULL)
 		return (NULL);
 	while (ct < anim.frame)
 	{
-		path = concat_animation_path(path, ct);
+		path = concat_animation_path(anim.path, ct);
 		if (path == NULL)
 		{
 			free(ret);

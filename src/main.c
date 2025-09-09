@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:06:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:41:29 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 17:20:20 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "../include/parsing.h"
 #include "../include/load_game.h"
 #include "../include/game.h"
+#include "../include/home.h"
 
 int	main(int ac, char **av)
 {
@@ -32,5 +33,5 @@ int	main(int ac, char **av)
 		return (print_error("Error\n Bad Data\n"));
 	if (load_structure(ctrl) == false)
 		return (print_error("Error\n Bad Data\n"));
-	game(ctrl);
+	home_loop(ctrl);
 }

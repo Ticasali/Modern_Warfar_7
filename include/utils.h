@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/06 10:18:21 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 16:57:29 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void			*free_tab(char **tab, char *str);
 size_t			count_words(char *str, char c);
 size_t			ft_strlen(char *str);
 size_t			filelen(int fd);
+size_t	 		count_expand(int num);
 
 double			atod(char *str);
 double			get_time(void);

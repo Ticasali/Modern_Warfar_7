@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 12:17:44 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:43:36 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 17:19:22 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	home_loop(t_control *ctrl)
 	mlx_hook(ctrl->win->win, ButtonPress, ButtonPressMask, mouse_input_home, ctrl);
 	mlx_loop_hook(ctrl->win->ml, home_render, ctrl);
 	mlx_loop(ctrl->win->ml);
+	/*
 	if (ctrl->home->statement == 1)
 	{
 		mlx_reset(ctrl->win->ml);
@@ -33,6 +34,7 @@ void	home_loop(t_control *ctrl)
 		//Astro free
 		return ;
 	}
+		*/
 }
 
 int		escape_touch_home(int keycode, t_control *ctrl)

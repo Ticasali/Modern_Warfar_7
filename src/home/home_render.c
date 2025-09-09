@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 12:47:38 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:06:49 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/09 17:14:54 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,13 @@ int	home_render(t_control *ctrl)
 	{
 		mlx_mouse_get_pos(ctrl->win->ml, ctrl->win->win,
 			&ctrl->home->x_mouse, &ctrl->home->y_mouse);
-		home_animation_button(ctrl);
+//		home_animation_button(ctrl);
 		ctrl->home->time = time;
 		mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
 			ctrl->home->background->sprite[ctrl->home->background->frame_actual], 0, 0);
-		if (ctrl->home->background->frame_actual < ctrl->home->background->frame_max)
-			++ctrl->home->background->frame_actual;
-		else
-			ctrl->home->background->frame_actual = 0;
+		increase_animation_frame(ctrl->home->background);
 	}
+	printf("--->%d\n", ctrl->home->statement);
 	if (ctrl->home->statement == 3 || ctrl->home->statement == 1)
 		mlx_loop_end(ctrl->win->ml);	
 	return (0);
