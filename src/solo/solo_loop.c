@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:11:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 13:11:00 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:03:12 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # include "../include/turbolibx.h"
 # include "../include/solo.h"
 # include "../include/game.h"
-
+# include "../include/home.h"
 
 void	solo_loop(t_control *ctrl)
 {
@@ -32,7 +32,10 @@ void	solo_loop(t_control *ctrl)
 //		Multi Menu
 	if (ctrl->solo->statement == 3)
 	{
-		//Astro free
+		mlx_reset(ctrl->win->ml);
+		mlx_clear_window(ctrl->win->ml, ctrl->win->win);
+		ctrl->solo->statement = 0;
+		home_loop(ctrl);
 		return ;
 	}
 }
