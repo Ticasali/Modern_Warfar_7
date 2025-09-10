@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:12:40 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 20:30:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:05:28 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ t_player	*load_player(char **map)
 	play = malloc(sizeof(t_player));
 	if (play == NULL)
 		return (NULL);
-	play->pos_x = 4;		//find_player_pos(map, true);
-	play->pos_y = 4;		//find_player_pos(map, false);
+	play->pos_x = 4;//find_player_pos(map, true);
+	play->pos_y = 4;//find_player_pos(map, false);
 	play->m_back = false;
 	play->m_front = false;
 	play->m_left = false;

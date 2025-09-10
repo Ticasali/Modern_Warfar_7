@@ -6,11 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:55:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 09:38:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:13:57 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
+#include "../include/modern_warfare_7.h"
 
 void	reset_animation_frame(t_anim *anim)
 {

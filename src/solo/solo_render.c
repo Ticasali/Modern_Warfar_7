@@ -6,14 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:11:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 19:59:38 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:10:37 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/utils.h"
-# include "../include/solo.h"
-# include "../include/turbolibx.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/utils.h"
+#include "../include/solo.h"
+#include "../include/turbolibx.h"
 
 int	solo_render(t_control *ctrl)
 {
@@ -39,6 +39,6 @@ int	solo_render(t_control *ctrl)
 		increase_animation_frame(ctrl->solo->background);
 	}
 	if (ctrl->solo->statement == 3 || ctrl->solo->statement == 1)
-		mlx_loop_end(ctrl->win->ml);	
+		mlx_loop_end(ctrl->win->ml);
 	return (0);
 }

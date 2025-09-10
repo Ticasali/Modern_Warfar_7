@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:59:12 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 12:16:41 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:01:41 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/home.h"
-# include "../include/turbolibx.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/home.h"
+#include "../include/turbolibx.h"
 
 void	home_animation_button(t_control *ctrl)
 {

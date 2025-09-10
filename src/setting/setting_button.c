@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 13:16:03 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 13:17:56 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:08:47 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/setting.h"
-# include "../include/turbolibx.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/setting.h"
+#include "../include/turbolibx.h"
 
 void	setting_animation_button(t_control *ctrl)
 {

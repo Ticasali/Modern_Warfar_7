@@ -6,14 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 12:21:14 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 19:59:29 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:13:42 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/turbolibx.h"
-# include "../include/utils.h"
-
+#include "../include/modern_warfare_7.h"
+#include "../include/turbolibx.h"
+#include "../include/utils.h"
 
 char	*concat_animation_path(char *path, size_t num)
 {
@@ -79,7 +78,8 @@ void	**load_animation(t_window *win, t_anim_loader anim)
 	return (ret);
 }
 
-t_anim	*load_animation_struct(t_window *win, t_anim_loader loader, int x, int y)
+t_anim	*load_animation_struct(t_window *win,
+	t_anim_loader loader, int x, int y)
 {
 	t_anim	*anim;
 

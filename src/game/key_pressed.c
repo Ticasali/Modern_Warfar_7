@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:18:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 20:26:18 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 21:55:27 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-int		key_pressed_game(int keycode, t_control *ctrl)
+int	key_pressed_game(int keycode, t_control *ctrl)
 {
 	if (keycode == XK_Escape)
 	{

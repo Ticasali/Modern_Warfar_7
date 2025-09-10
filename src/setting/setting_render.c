@@ -6,12 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:05:29 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 10:49:50 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:07:40 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/utils.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/utils.h"
 
 int	setting_render(t_control *ctrl)
 {
@@ -34,6 +34,6 @@ int	setting_render(t_control *ctrl)
 			ctrl->setting->background->frame_actual = 0;
 	}
 	if (ctrl->setting->statement == 3 || ctrl->setting->statement == 1)
-		mlx_loop_end(ctrl->win->ml);	
+		mlx_loop_end(ctrl->win->ml);
 	return (0);
 }
