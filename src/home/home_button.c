@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:59:12 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:47:24 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 10:03:59 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 
 void	home_animation_button(t_control *ctrl)
 {
-	if (ctrl->home->x_mouse >= 500 && ctrl->home->x_mouse <= 600
-		&& ctrl->home->y_mouse >= 150 && ctrl->home->y_mouse <= 200)
+	if (ctrl->home->x_mouse >= 400 && ctrl->home->x_mouse <= 700
+		&& ctrl->home->y_mouse >= 300 && ctrl->home->y_mouse <= 400)
 	{
 		increase_animation_frame(ctrl->home->solo);
 		reset_animation_frame(ctrl->home->multi);
 		reset_animation_frame(ctrl->home->quit);
 	}
-	else if (ctrl->home->x_mouse >= 500 && ctrl->home->x_mouse <= 600
-		&& ctrl->home->y_mouse >= 250 && ctrl->home->y_mouse <= 300)
+	else if (ctrl->home->x_mouse >= 400 && ctrl->home->x_mouse <= 700
+		&& ctrl->home->y_mouse >= 500 && ctrl->home->y_mouse <= 600)
 	{
 		increase_animation_frame(ctrl->home->multi);
 		reset_animation_frame(ctrl->home->solo);
 		reset_animation_frame(ctrl->home->quit);
 	}
-	else if (ctrl->home->x_mouse >= 500 && ctrl->home->x_mouse <= 600
-		&& ctrl->home->y_mouse >= 350 && ctrl->home->y_mouse <= 400)
+	else if (ctrl->home->x_mouse >= 400 && ctrl->home->x_mouse <= 700
+		&& ctrl->home->y_mouse >= 700 && ctrl->home->y_mouse <= 800)
 	{
 		increase_animation_frame(ctrl->home->quit);
 		reset_animation_frame(ctrl->home->multi);
