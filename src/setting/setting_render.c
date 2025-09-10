@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:05:29 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:42:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 10:49:50 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	setting_render(t_control *ctrl)
 	double	test;
 
 	time = get_time();
-	test = 0.2;
+	test = 0.1;
 	if ((time - test) > ctrl->setting->time)
 	{
 		mlx_mouse_get_pos(ctrl->win->ml, ctrl->win->win,
