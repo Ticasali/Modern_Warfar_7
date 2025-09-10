@@ -6,13 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:11:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/09 14:45:28 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 13:11:00 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 # include "../include/turbolibx.h"
 # include "../include/solo.h"
+# include "../include/game.h"
 
 
 void	solo_loop(t_control *ctrl)
@@ -25,7 +26,7 @@ void	solo_loop(t_control *ctrl)
 	{
 		mlx_reset(ctrl->win->ml);
 		mlx_clear_window(ctrl->win->ml, ctrl->win->win);
-//		load_new_game(ctrl);
+		game(ctrl);
 	}
 //	if (menu->statement == 2)
 //		Multi Menu
