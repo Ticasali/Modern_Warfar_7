@@ -6,12 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:13:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 11:07:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 11:23:56 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/modern_warfare_7.h"
 # include "../include/turbolibx.h"
+# include "../include/utils.h"
 
 t_solo	*load_solo(t_window *win)
 {
