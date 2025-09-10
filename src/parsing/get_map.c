@@ -6,18 +6,23 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 00:34:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:38:35 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 21:00:26 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/parsing.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/parsing.h"
 
 char	**get_map(char	**file)
 {
-	size_t	y = 0;
+	size_t	y;
 	size_t	x;
-	char	**map = malloc(sizeof(char *) * 9);
+	char	**map;
+
+	y = 0;
+	map = malloc(sizeof(char *) * 9);
+	if (map == NULL)
+		return (NULL);
 	while (y < 8)
 	{
 		x = 0;
