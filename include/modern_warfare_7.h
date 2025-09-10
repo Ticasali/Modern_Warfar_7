@@ -6,12 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 13:19:10 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:51:08 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
+# define MODERN_WARFARE_7_H
 
 # include "../mlx_linux/mlx.h"
 # include "../mlx_linux/mlx_int.h"
@@ -36,7 +36,7 @@ typedef struct trspy_s
 	int		line_len;
 }	t_trspy;
 
-typedef	struct	s_anim_loader
+typedef struct s_anim_loader
 {
 	int		x;
 	int		y;
@@ -44,7 +44,7 @@ typedef	struct	s_anim_loader
 	char	*path;
 }	t_anim_loader;
 
-typedef	struct	s_anim
+typedef struct s_anim
 {
 	void	**sprite;
 	int		x;
@@ -55,10 +55,10 @@ typedef	struct	s_anim
 	int		frame_max;
 }	t_anim;
 
-typedef	struct	s_data
+typedef struct s_data
 {
 	void			*north;
-	void 			*south;
+	void			*south;
 	void			*west;
 	void			*east;
 	unsigned char	*floor;
@@ -66,7 +66,7 @@ typedef	struct	s_data
 	char			**map;
 }	t_data;
 
-typedef struct	s_player
+typedef struct s_player
 {
 	double	pos_x;
 	double	pos_y;
@@ -81,14 +81,13 @@ typedef struct	s_player
 	bool	t_left;
 }	t_player;
 
-
-typedef struct	s_window
+typedef struct s_window
 {
 	void	*ml;
 	void	*win;
 }	t_window;
 
-typedef	struct	s_home
+typedef struct s_home
 {
 	int			statement;
 	int			x_mouse;
@@ -100,7 +99,7 @@ typedef	struct	s_home
 	t_anim		*quit;
 }	t_home;
 
-typedef	struct	s_setting
+typedef struct s_setting
 {
 	int			statement;
 	int			x_mouse;
@@ -110,7 +109,7 @@ typedef	struct	s_setting
 	t_anim		*button;
 }	t_setting;
 
-typedef	struct	s_solo
+typedef struct s_solo
 {
 	int			statement;
 	int			x_mouse;
@@ -123,7 +122,7 @@ typedef	struct	s_solo
 	t_anim		*home;
 }	t_solo;
 
-typedef struct	s_control
+typedef struct s_control
 {
 	t_window	*win;
 	t_data		*data;

@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:12:40 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:06:47 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:30:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ t_player	*load_player(char **map)
 	play->m_front = false;
 	play->m_left = false;
 	play->m_right = false;
+	play->delta_x = 0.1;
+	play->delta_y = 0.1;
 	return (play);
 }
 

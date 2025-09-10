@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:18:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:10:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:26:18 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		key_pressed_game(int keycode, t_control *ctrl)
 		mlx_destroy_window(ctrl->win->ml, ctrl->win->win);
 		return (-1);
 	}
-	if (keycode == XK_z)
+	if (keycode == XK_w)
 		ctrl->player->m_front = true;
 	if (keycode == XK_q)
 		ctrl->player->m_left = true;

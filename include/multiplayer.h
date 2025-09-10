@@ -6,11 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:49:14 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/04 15:49:37 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:47:17 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	MULTIPLAYER_H
-#define MULTIPLAYER_H
+#ifndef MULTIPLAYER_H
+# define MULTIPLAYER_H
 
 #endif

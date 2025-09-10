@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:23:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:11:01 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:26:38 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		key_release_game(int keycode, t_control *ctrl)
 {
 	if (keycode == XK_w)
 		ctrl->player->m_front = false;
-	if (keycode == XK_a)
+	if (keycode == XK_q)
 		ctrl->player->m_left = false;
 	if (keycode == XK_s)
 		ctrl->player->m_back = false;

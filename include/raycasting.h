@@ -6,12 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 15:12:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/07 01:57:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:51:23 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RAYCASTING_H
-#define RAYCASTING_H
+# define RAYCASTING_H
 # include "modern_warfare_7.h"
 
 #endif
