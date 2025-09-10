@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 12:17:44 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 11:20:26 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 12:29:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	home_loop(t_control *ctrl)
 	mlx_loop(ctrl->win->ml);
 	if (ctrl->home->statement == 1)
 	{
-		mlx_reset(ctrl->win->ml);
 		mlx_clear_window(ctrl->win->ml, ctrl->win->win);
+		mlx_reset(ctrl->win->ml);
 		solo_loop(ctrl);
 	}
 	if (ctrl->home->statement == 2)

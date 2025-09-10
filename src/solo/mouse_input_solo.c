@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:14:45 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 11:19:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 12:10:32 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	mouse_input_solo(int button, int x, int y, t_control *ctrl)
 {
 	if (button == 1)
 	{
-		if ((x >= 500 && x <= 600) && (y >= 150 && y <= 200))
+		if ((x >= 400 && x <= 700) && (y >= 300 && y <= 400))
 			ctrl->solo->statement = 1;
-		if ((x >= 500 && x <= 600) && (y >= 250 && y <= 300))
+		if ((x >= 400 && x <= 700) && (y >= 50 && y <= 600))
 			ctrl->solo->statement = 2;
-		if ((x >= 500 && x <= 600) && (y >= 350 && y <= 400))
+		if ((x >= 400 && x <= 700) && (y >= 700 && y <= 800))
 			ctrl->solo->statement = 3;
 	}
 	return (0);

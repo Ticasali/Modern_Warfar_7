@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 08:47:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 11:19:42 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 11:44:59 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ t_home	*load_home(t_window *win)
 	home->background = load_animation_struct(win,
 			anim_loader(1728, 960, 12, "./texture/home/67787c768fd04be4a212dc45a37ec31c"), 0, 0);
 	home->solo	= load_animation_struct(win,
-			anim_loader(400, 100, 5, "./texture/solo"), 300, 200);
+			anim_loader(400, 100, 5, "./texture/home/solo"), 300, 200);
 	home->multi	= load_animation_struct(win,
-			anim_loader(400, 100, 8, "./texture/settng"), 300, 400);
+			anim_loader(400, 100, 8, "./texture/home/settng"), 300, 400);
 	home->quit = load_animation_struct(win,
-			anim_loader(400, 100, 5, "./texture/exit"), 300, 600);
+			anim_loader(400, 100, 5, "./texture/home/exit"), 300, 600);
 	return (home);
 }

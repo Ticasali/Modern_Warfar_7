@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/09/09 13:56:48 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/10 12:17:33 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRCS		=		src/main.c							\
 					src/solo/solo_render.c				\
 					src/solo/load_solo.c				\
 					src/solo/mouse_input_solo.c			\
+					src/solo/solo_button.c				\
 														\
 					src/turbolibx/animation_frame.c		\
 					src/turbolibx/draw_line.c			\
