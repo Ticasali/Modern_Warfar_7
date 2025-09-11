@@ -1,26 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animation_frame.c                                  :+:      :+:    :+:   */
+/*   mlx_string.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 11:55:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 15:11:03 by ticasali         ###   ########.fr       */
+/*   Created: 2025/09/11 15:42:04 by ticasali          #+#    #+#             */
+/*   Updated: 2025/09/11 15:50:24 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 
-void	reset_animation_frame(t_anim *anim)
-{
-	anim->frame_actual = 0;
-}
-
-void	increase_animation_frame(t_anim *anim)
-{
-	if (anim->frame_actual < anim->frame_max - 1)
-		++anim->frame_actual;
-	else
-		anim->frame_actual = 0;
-}

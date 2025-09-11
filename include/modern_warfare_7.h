@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 12:57:55 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 15:20:09 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,14 @@ typedef struct s_img
 	char			*name;
 	struct s_img	*next;
 }	t_img;
+
+typedef struct s_font
+{
+	void	**font;
+	void	**font_maj;
+	void	**font_num;
+	void	**font_spe;
+}	t_font;
 
 typedef struct s_data
 {
