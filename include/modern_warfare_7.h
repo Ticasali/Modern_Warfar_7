@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   modern_warfare_7.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erbuffet <erbuffet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 15:10:10 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 18:44:50 by erbuffet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # include <fcntl.h>
 # include <math.h>
 
-typedef struct trspy_s
+typedef struct trspy_s // transparancy
 {
 	int		y;
 	int		x;
@@ -37,7 +37,7 @@ typedef struct trspy_s
 }	t_trspy;
 
 
-typedef	struct	s_data
+typedef	struct	s_data 
 {
 	void			*north;
 	void 			*south;

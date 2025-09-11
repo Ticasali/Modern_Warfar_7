@@ -1,86 +1,127 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/08/06 13:59:28 by ticasali         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
-NAME		=		Modern_Warfare_7
+#######################################
+#########      NAME      ##############
+#######################################
 
-MLXDIR		= 		mlx_linux/
-MLX			=		libmlx_Linux.a
+NAME = MWF7
 
-DIR_SRCS 	=		src				\
-					src/load_render	\
-					src/multiplayer	\
-					src/parsing		\
-					src/render		\
-					src/utils		\
+#######################################
+######### FLAGS & COMPIL ##############
+#######################################
 
-SRCS		=		src/main.c						\
-													\
-					src/load_render/load_struct.c	\
-					src/load_render/load_window.c	\
-													\
-					src/multiplayer/multiplayer.c	\
-													\
-					src/parsing/check_arg.c			\
-					src/parsing/check_parsing.c		\
-					src/parsing/get_map.c			\
-					src/parsing/load_data.c			\
-					src/parsing/pars_data_line.c	\
-					src/parsing/secure_load_data.c	\
-													\
-					src/player/load_player.c		\
-													\
-					src/render/display_map.c		\
-					src/render/game_loop.c			\
-					src/render/game_render.c		\
-					src/render/key_pressed.c		\
-					src/render/key_release.c		\
-					src/render/move_player.c		\
-													\
-					src/utils/compare.c				\
-					src/utils/convert.c				\
-					src/utils/copy.c				\
-					src/utils/count.c				\
-					src/utils/error.c				\
-					src/utils/get_time.c			\
-					src/utils/load_image.c			\
-					src/utils/split.c				\
-					src/utils/transparency.c		\
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -g3
+MAKEFLAGS += --no-print-directory
+VALGRIND = valgrind --leak-check=full --show-leak-kinds=all --trace-children=yes --track-fds=yes
 
-DIR_OBJS 	=		.objs
+#######################################
+######### FILES / HEADERS #############
+#######################################
 
-OBJS 		=		$(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
+HEADERS = 	include/modern_warfare_7.h		\
+			include/parsing.h         		\
+			include/player.h          		\
+			include/raycasting.h      		\
+			include/render.h          		\
+			include/utils.h            		\
 
-CC			=		cc
+SOURCES = 	src/main.c						\
+			src/load_render/load_struct.c	\
+			src/load_render/load_window.c	\
+			src/multiplayer/multiplayer.c	\
+			src/parsing/check_arg.c			\
+			src/parsing/check_parsing.c		\
+			src/parsing/get_map.c			\
+			src/parsing/load_data.c			\
+			src/parsing/pars_data_line.c	\
+			src/parsing/secure_load_data.c	\
+			src/player/load_player.c		\
+			src/render/display_map.c		\
+			src/render/game_loop.c			\
+			src/render/game_render.c		\
+			src/render/key_pressed.c		\
+			src/render/key_release.c		\
+			src/render/move_player.c		\
+			src/utils/compare.c				\
+			src/utils/convert.c				\
+			src/utils/copy.c				\
+			src/utils/count.c				\
+			src/utils/error.c				\
+			src/utils/get_time.c			\
+			src/utils/split.c				\
+			src/utils/transparency.c		\
+			src/utils/load_image.c			\
 
-CFLAGS		= 		-Wextra -Wall -Werror -g3 -O3
+#######################################
+#########      BUILD     ##############
+#######################################
 
-all:	$(NAME)
+BUILD_DIR = .build/
+INC_DIR = include/
+INCS = -I ./$(INC_DIR)
 
-$(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c modern_warfare_7.h
-					@mkdir -p $(dir $@)
-					$(CC) $(CFLAGS) -c $< -o $@ -I ./include
+# Generate object files from source files
+OBJS = $(patsubst src/%.c,$(BUILD_DIR)%.o,$(SOURCES))
+DEPS = $(OBJS:.o=.d)
 
-$(NAME): $(OBJS) $(MLXDIR)$(MLX)
-	$(CC) $(OBJS) -g3 -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+#######################################
+#########      RULES     ##############
+#######################################
 
-$(MLXDIR)$(MLX):
-	@$(MAKE) -s -C $(MLXDIR)
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) -o $@
+	@echo "\n✅ $(NAME) compiled successfully!✅"
+
+$(BUILD_DIR)%.o: src/%.c $(HEADERS) | $(BUILD_DIR)
+	@mkdir -p $(dir $@)
+	@echo "\t Compiling $<"
+	@$(CC) $(CFLAGS) $(INCS) -MMD -MP -c $< -o $@
+
+$(BUILD_DIR):
+	@mkdir -p $@
+	@echo "🛠️  Building $(NAME)...\n"
+
+# Include dependency files
+-include $(DEPS)
+
+#######################################
+#########      CLEAN     ##############
+#######################################
 
 clean:
-	$(RM) -r $(DIR_OBJS)
+	@$(RM) -rf $(BUILD_DIR)
+	@echo " Object files cleaned"
+	@echo " Object files removed"
+	@echo "\n\t ✅ clean successful! ✅\n"
 
-fclean:	clean
-	make clean -C mlx_linux/
-	rm -f $(NAME)
+fclean: clean
+	@$(RM) $(NAME)
+	@echo " Executable removed"
+	@echo "\n\t ✅ fclean successful! ✅"
 
-re :	fclean all
+re: fclean all
 
+#######################################
+#########      DEBUG     ##############
+#######################################
+
+valgrind: $(NAME)
+	@echo "\n\t ⚠️  Running program!  ⚠️  \n"
+	$(VALGRIND) ./$(NAME)
+
+#######################################
+#########      HELP      ##############
+#######################################
+
+help:
+	@echo "Available targets:\n"
+	@echo "\t all      - Build $(NAME) (default)"
+	@echo "\t clean    - Remove object files"
+	@echo "\t fclean   - Remove object files and executable"  
+	@echo "\t re       - Clean and rebuild"
+	@echo "\t valgrind - Run with valgrind"
+	@echo "\t help     - Show this help\n"
+
+.PHONY: all clean fclean re valgrind help
