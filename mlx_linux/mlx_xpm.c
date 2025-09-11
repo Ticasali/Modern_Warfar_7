@@ -148,7 +148,7 @@ void	*mlx_int_parse_xpm(t_xvar *xvar,void *info,int info_size,char *(*f)())
 		int		x;
 		int		i;
 		int		j;
-		t_img	*img;
+		t_image	*img;
 		t_xpm_col	*colors;
 		int		*colors_direct;
 		int		width;

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   mouse_input_setting.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 13:06:08 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 22:07:51 by ticasali         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/modern_warfare_7.h"
 
 int	mouse_input_setting(int button, int x, int y, t_control *ctrl)
