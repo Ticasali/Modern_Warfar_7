@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   modern_warfare_7.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erbuffet <erbuffet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 15:20:09 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:06:41 by erbuffet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,7 @@
 # include <fcntl.h>
 # include <math.h>
 
-typedef struct s_input
-{
-	int	dash;
-	int	down;
-	int	front;
-	int	hide;
-	int item1;
-	int item2;
-	int	item3;
-	int	item4;
-	int jump;
-	int	left;
-	int	loading;
-	int	right;
-	int	shoot;
-}	t_input;
-
-typedef struct s_trspy
+typedef struct trspy_s // transparancy
 {
 	int		y;
 	int		x;
@@ -61,46 +44,7 @@ typedef struct s_anim_loader
 	char	*path;
 }	t_anim_loader;
 
-typedef struct s_anim
-{
-	void	**sprite;
-	int		x;
-	int		y;
-	int		height;
-	int		lenght;
-	int		frame_actual;		
-	int		frame_max;
-}	t_anim;
-
-
-typedef struct s_img_loader
-{
-	void	*sprite;
-	char	*name;
-	int		x;
-	int		y;
-}	t_img_loader;
-
-typedef struct s_img
-{
-	void			*sprite;
-	int				x;
-	int				y;
-	int				height;
-	int				lenght;
-	char			*name;
-	struct s_img	*next;
-}	t_img;
-
-typedef struct s_font
-{
-	void	**font;
-	void	**font_maj;
-	void	**font_num;
-	void	**font_spe;
-}	t_font;
-
-typedef struct s_data
+typedef	struct	s_data 
 {
 	void			*north;
 	void			*south;
