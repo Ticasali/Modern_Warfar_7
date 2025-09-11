@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 11:10:13 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:57:55 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,24 @@
 # include <fcntl.h>
 # include <math.h>
 
-typedef struct trspy_s
+typedef struct s_input
+{
+	int	dash;
+	int	down;
+	int	front;
+	int	hide;
+	int item1;
+	int item2;
+	int	item3;
+	int	item4;
+	int jump;
+	int	left;
+	int	loading;
+	int	right;
+	int	shoot;
+}	t_input;
+
+typedef struct s_trspy
 {
 	int		y;
 	int		x;
@@ -55,11 +72,13 @@ typedef struct s_anim
 	int		frame_max;
 }	t_anim;
 
+
 typedef struct s_img_loader
 {
+	void	*sprite;
+	char	*name;
 	int		x;
 	int		y;
-	char	*path;
 }	t_img_loader;
 
 typedef struct s_img
@@ -69,6 +88,7 @@ typedef struct s_img
 	int				y;
 	int				height;
 	int				lenght;
+	char			*name;
 	struct s_img	*next;
 }	t_img;
 
@@ -148,6 +168,7 @@ typedef struct s_control
 	t_home		*home;
 	t_setting	*setting;
 	t_solo		*solo;
+	t_input		*input;
 }	t_control;
 
 #endif

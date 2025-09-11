@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 11:10:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:29:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,52 @@ t_img	*load_setting_img(t_window *win)
 	ret = malloc(sizeof(t_img));
 	if (ret == NULL)
 		return (NULL);
-	add_node_first_setting(ret, img_loader(100, 100, "./"), 0, 0);
-	add_node_setting(ret, img_loader(100, 100, "./"), 0, 0);
+	add_node_first_setting(ret, img_loader(win, 100, 100, "./texture/setting/bar.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/barre.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/dash.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/down.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/front.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/hide.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/item1.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/item2.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/item3.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/item4.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/jump.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/left.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/loading.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/right.xpm"), 0, 0);
+	add_node_setting(ret, img_loader(win, 100, 100,"./texture/setting/shoot.xpm"), 0, 0);
+	return (ret);
+}
+
+void	add_node_first_setting(t_img *lst, t_img_loader img, int height, int length)
+{
+	lst->sprite = img.sprite;
+	lst->name = img.name;
+	lst->x = img.x;
+	lst->y = img.y;
+	lst->height = height;
+	lst->lenght = length;
+	lst->next = NULL;
+}
+
+void	add_node_setting(t_img *lst, t_img_loader img, int height, int length)
+{
+	t_img	*cpy;
+	t_img	*node;
+
+	node = malloc(sizeof(t_img));
+	if (node == NULL)
+		return (NULL);
+	cpy = lst;
+	while (cpy->next != NULL)
+		cpy = cpy->next;
+	node->sprite = img.sprite;
+	node->x = img.x;
+	node->y = img.y;
+	node->height = height;
+	node->lenght = length;
+	node->name = img.name;
+	node->next = NULL;
+	cpy->next = node;
 }
