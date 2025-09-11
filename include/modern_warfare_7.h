@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 15:20:09 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 18:54:00 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,6 @@ typedef struct s_img
 typedef struct s_font
 {
 	void	**font;
-	void	**font_maj;
-	void	**font_num;
-	void	**font_spe;
 }	t_font;
 
 typedef struct s_data
@@ -177,6 +174,7 @@ typedef struct s_control
 	t_setting	*setting;
 	t_solo		*solo;
 	t_input		*input;
+	t_font		*font;
 }	t_control;
 
 #endif

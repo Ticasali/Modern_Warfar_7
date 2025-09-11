@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"modern_warfare_7.h": "c",
+		"mlx_int.h": "c",
+		"utils.h": "c",
+		"render.h": "c",
+		"player.h": "c",
+		"parsing.h": "c",
+		"game.h": "c",
+		"home.h": "c"
+	}
+}
