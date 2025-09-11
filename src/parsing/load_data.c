@@ -6,12 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 16:11:30 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 03:57:47 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 20:58:20 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
-# include "../include/parsing.h"
+#include "../include/modern_warfare_7.h"
+#include "../include/parsing.h"
 
 t_data	*load_data(char **file, t_control *ctrl)
 {

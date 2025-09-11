@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 05:19:27 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 00:16:30 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:14:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	putchar_stderr(char c)
 	write(2, &c, 1);
 }
 
-int		print_error(char *str)
+int	print_error(char *str)
 {
 	size_t	ct;
 

@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 18:59:32 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 16:19:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:13:00 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
-
 
 size_t	get_pixel_img(t_trspy tr, int x, int y)
 {

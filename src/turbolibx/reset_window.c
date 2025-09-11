@@ -6,11 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:18:23 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/06 16:19:13 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/10 22:12:50 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/modern_warfare_7.h"
+#include "../include/modern_warfare_7.h"
 
 int	mlx_reset(t_xvar *xvar)
 {

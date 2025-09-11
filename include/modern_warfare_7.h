@@ -6,12 +6,12 @@
 /*   By: erbuffet <erbuffet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 18:44:50 by erbuffet         ###   ########lyon.fr   */
+/*   Updated: 2025/09/11 19:19:53 by erbuffet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MODERN_WARFARE_7_H
-#define MODERN_WARFARE_7_H
+# define MODERN_WARFARE_7_H
 
 # include "../mlx_linux/mlx.h"
 # include "../mlx_linux/mlx_int.h"
@@ -36,11 +36,18 @@ typedef struct trspy_s // transparancy
 	int		line_len;
 }	t_trspy;
 
+typedef struct s_anim_loader
+{
+	int		x;
+	int		y;
+	int		frame;
+	char	*path;
+}	t_anim_loader;
 
 typedef	struct	s_data 
 {
 	void			*north;
-	void 			*south;
+	void			*south;
 	void			*west;
 	void			*east;
 	unsigned char	*floor;
@@ -48,7 +55,7 @@ typedef	struct	s_data
 	char			**map;
 }	t_data;
 
-typedef struct	s_player
+typedef struct s_player
 {
 	double	pos_x;
 	double	pos_y;
@@ -63,18 +70,57 @@ typedef struct	s_player
 	bool	t_left;
 }	t_player;
 
-
-typedef struct	s_window
+typedef struct s_window
 {
 	void	*ml;
 	void	*win;
 }	t_window;
 
-typedef struct	s_control
+typedef struct s_home
+{
+	int			statement;
+	int			x_mouse;
+	int			y_mouse;
+	double		time;
+	t_anim		*background;
+	t_anim		*solo;
+	t_anim		*multi;
+	t_anim		*quit;
+}	t_home;
+
+typedef struct s_setting
+{
+	int			statement;
+	int			x_mouse;
+	int			y_mouse;
+	int			scroll;
+	double		time;
+	t_anim		*background;
+	t_img		*img;
+}	t_setting;
+
+typedef struct s_solo
+{
+	int			statement;
+	int			x_mouse;
+	int			y_mouse;
+	double		time;
+	t_anim		*background;
+	t_anim		*new;
+	t_anim		*continu;
+	t_anim		*setting;
+	t_anim		*home;
+}	t_solo;
+
+typedef struct s_control
 {
 	t_window	*win;
 	t_data		*data;
 	t_player	*player;
+	t_home		*home;
+	t_setting	*setting;
+	t_solo		*solo;
+	t_input		*input;
 }	t_control;
 
 #endif
