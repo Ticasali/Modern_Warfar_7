@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 19:33:52 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 21:08:19 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,23 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <math.h>
+
+typedef struct s_input
+{
+	int	dash;
+	int	down;
+	int	front;
+	int	hide;
+	int	item1;
+	int item2;
+	int item3;
+	int item4;
+	int jump;
+	int left;
+	int loading;
+	int right;
+	int shoot;
+}	t_input;
 
 typedef struct trspy_s // transparancy
 {
@@ -54,7 +71,6 @@ typedef struct s_anim
 	int		frame_actual;		
 	int		frame_max;
 }	t_anim;
-
 
 typedef struct s_img_loader
 {
