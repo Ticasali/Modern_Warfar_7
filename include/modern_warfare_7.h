@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 20:51:08 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/11 11:10:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,23 @@ typedef struct s_anim
 	int		frame_actual;		
 	int		frame_max;
 }	t_anim;
+
+typedef struct s_img_loader
+{
+	int		x;
+	int		y;
+	char	*path;
+}	t_img_loader;
+
+typedef struct s_img
+{
+	void			*sprite;
+	int				x;
+	int				y;
+	int				height;
+	int				lenght;
+	struct s_img	*next;
+}	t_img;
 
 typedef struct s_data
 {
@@ -104,9 +121,10 @@ typedef struct s_setting
 	int			statement;
 	int			x_mouse;
 	int			y_mouse;
+	int			scroll;
 	double		time;
 	t_anim		*background;
-	t_anim		*button;
+	t_img		*img;
 }	t_setting;
 
 typedef struct s_solo
