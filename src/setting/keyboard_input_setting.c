@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 17:59:19 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 19:37:50 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 19:56:16 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,18 @@ int	keyboard_input_setting(int keycode, t_control *ctrl)
 	if (keycode == XK_Escape)
 		ctrl->setting->statement = 3;
 	if (keycode == XK_Up)
-		ctrl->setting->scroll -= 30;
+	{
+		if (ctrl->setting->scroll >= 30)
+			ctrl->setting->scroll -= 30;
+		else
+			ctrl->setting->scroll = 0;
+	}
 	if (keycode == XK_Down)
-		ctrl->setting->scroll += 30;
+	{
+		if (ctrl->setting->scroll <= 520)
+			ctrl->setting->scroll += 30;
+		else
+			ctrl->setting->scroll = 550;
+	}
 	return (0);
 }
