@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 21:08:19 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 13:55:25 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ typedef struct s_img_loader
 	int		y;
 }	t_img_loader;
 
-typedef struct s_img
+typedef struct s_image
 {
 	void			*sprite;
 	int				x;
@@ -88,8 +88,8 @@ typedef struct s_img
 	int				height;
 	int				lenght;
 	char			*name;
-	struct s_img	*next;
-}	t_img;
+	struct s_image	*next;
+}	t_image;
 
 typedef struct s_font
 {
@@ -148,7 +148,7 @@ typedef struct s_setting
 	int			scroll;
 	double		time;
 	t_anim		*background;
-	t_img		*img;
+	t_image		*img;
 }	t_setting;
 
 typedef struct s_solo

@@ -6,13 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 12:29:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 13:58:07 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 #include "../include/turbolibx.h"
 #include "../include/utils.h"
+#include "../include/setting.h"
 
 
 t_setting	*load_setting(t_window *win)
@@ -33,11 +34,11 @@ t_setting	*load_setting(t_window *win)
 	return (setting);
 }
 
-t_img	*load_setting_img(t_window *win)
+t_image	*load_setting_img(t_window *win)
 {
-	t_img	*ret;
+	t_image	*ret;
 
-	ret = malloc(sizeof(t_img));
+	ret = malloc(sizeof(t_image));
 	if (ret == NULL)
 		return (NULL);
 	add_node_first_setting(ret, img_loader(win, 100, 100, "./texture/setting/bar.xpm"), 0, 0);
@@ -58,7 +59,7 @@ t_img	*load_setting_img(t_window *win)
 	return (ret);
 }
 
-void	add_node_first_setting(t_img *lst, t_img_loader img, int height, int length)
+void	add_node_first_setting(t_image *lst, t_img_loader img, int height, int length)
 {
 	lst->sprite = img.sprite;
 	lst->name = img.name;
@@ -69,14 +70,14 @@ void	add_node_first_setting(t_img *lst, t_img_loader img, int height, int length
 	lst->next = NULL;
 }
 
-void	add_node_setting(t_img *lst, t_img_loader img, int height, int length)
+void	add_node_setting(t_image *lst, t_img_loader img, int height, int length)
 {
-	t_img	*cpy;
-	t_img	*node;
+	t_image	*cpy;
+	t_image	*node;
 
-	node = malloc(sizeof(t_img));
+	node = malloc(sizeof(t_image));
 	if (node == NULL)
-		return (NULL);
+		return ;
 	cpy = lst;
 	while (cpy->next != NULL)
 		cpy = cpy->next;

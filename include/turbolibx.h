@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 09:34:53 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 20:52:30 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 13:41:18 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_anim			*load_animation_struct(t_window *win,
 
 t_trspy			load_transparency(void *ptr, int x, int y);
 
+t_img_loader	img_loader(t_window *win, int x, int y, char *path);
+
 t_anim_loader	anim_loader(int x, int y, int frame, char *path);
 
 void			**load_animation(t_window *win, t_anim_loader anim);
@@ -27,6 +29,7 @@ void			*load_image(t_window *win, char *path, int x, int y);
 void			*load_image_free_path(t_window *win, char *path, int x, int y);
 
 char			*concat_animation_path(char *path, size_t num);
+char			*get_texture_name(char *path);
 
 size_t			get_pixel_img(t_trspy tr, int x, int y);
 

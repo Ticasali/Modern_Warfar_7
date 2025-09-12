@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:43:22 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 12:47:18 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 13:59:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "../include/player.h"
 #include "../include/solo.h"
 #include "../include/setting.h"
+#include "../include/load_game.h"
+
 
 bool	load_structure(t_control *ctrl)
 {
