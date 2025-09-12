@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:16:40 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 12:23:25 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 19:46:19 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/utils.h"
 
 void	*load_image(t_window *win, char *path, int x, int y)
 {
@@ -36,7 +37,7 @@ char	*get_texture_name(char *path)
 	ct = 0;
 	while (path[ct] != '\0')
 		++ct;
-	while (path[ct] != '\\')
+	while (path[ct] != 47)
 		--ct;
 	return (&path[ct + 1]);
 }

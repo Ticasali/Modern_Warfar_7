@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 16:47:49 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 19:47:13 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 char			**split(char *str);
 
 char			*strdup_select(char *str, char c);
+char			*ft_strdup(char *str);
 
 void			*free_tab(char **tab, char *str);
 

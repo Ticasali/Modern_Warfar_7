@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 16:16:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 18:27:54 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 19:47:04 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	setting_button_render(t_control *ctrl)
 	lst = ctrl->setting->img;
 	while (lst != NULL)
 	{
-		if (!ft_strcmp(lst->name, "bar")
-			&& !ft_strcmp(lst->name, "barre"))
+		if (!ft_strcmp(lst->name, "bar.xpm")
+			&& !ft_strcmp(lst->name, "barre.xpm"))
 		{
 			if (((lst->y - ctrl->setting->scroll) < 960)
 				&& ((lst->y - ctrl->setting->scroll) > 0))
