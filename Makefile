@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/09/12 19:53:40 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/12 22:04:06 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRCS		=		src/main.c							\
 					src/setting/setting_button_render.c	\
 					src/setting/setting_render.c		\
 					src/setting/load_setting.c			\
+					src/setting/scrolling_system.c		\
 					src/setting/mouse_input_setting.c	\
 														\
 					src/solo/solo_loop.c				\

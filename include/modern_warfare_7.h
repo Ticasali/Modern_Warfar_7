@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 13:55:25 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 20:07:02 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,8 @@ typedef struct s_setting
 	double		time;
 	t_anim		*background;
 	t_image		*img;
+	t_image		*bar;
+	t_image		*bar_b;
 }	t_setting;
 
 typedef struct s_solo

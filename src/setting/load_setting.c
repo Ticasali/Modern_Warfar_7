@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 18:19:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 21:53:21 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ t_setting	*load_setting(t_window *win)
 			anim_loader(1728, 960, 12,
 				"./texture/home/67787c768fd04be4a212dc45a37ec31c"), 0, 0);
 	setting->img = load_setting_img(win);
+	setting->bar = load_setting_bar(win);
+	setting->bar_b = load_setting_bar_b(win);
 	return (setting);
 }
 
@@ -42,9 +44,7 @@ t_image	*load_setting_img(t_window *win)
 	ret = malloc(sizeof(t_image));
 	if (ret == NULL)
 		return (NULL);
-	add_node_first_setting(ret, img_loader(win, 50, 960, "./texture/setting/bar.xpm"), 1678, 0);
-	add_node_setting(ret, img_loader(win, 45, 200,"./texture/setting/barre.xpm"), 1680, 10);
-	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/dash.xpm"), 200, 200);
+	add_node_first_setting(ret, img_loader(win, 200, 100,"./texture/setting/dash.xpm"), 200, 200);
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/down.xpm"), 800, 200);
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/front.xpm"), 200, 400);
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/shoot.xpm"), 800, 400);
