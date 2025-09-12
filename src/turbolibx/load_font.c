@@ -6,11 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 15:29:38 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 21:37:47 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 16:44:30 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/turbolibx.h"
+#include "../include/utils.h"
 
 char	*concat_font_path(char *path, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:08:17 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 20:48:51 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 16:47:49 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,11 @@ int				print_error(char *str);
 unsigned char	atorgb(char *str);
 
 bool			compare_extension(char *s1, char *s2);
+bool			ft_strcmp(char *s1, char *s2);
 
 void			putchar_stderr(char c);
+void			ft_putchar(char c);
+void			ft_putstr(char *str);
+void			ft_putnbr(int nb);
 
 #endif

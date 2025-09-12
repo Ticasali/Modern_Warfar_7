@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 06:04:14 by ticasali          #+#    #+#             */
-/*   Updated: 2025/08/05 03:04:10 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 16:22:14 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,21 @@ bool	compare_extension(char *s1, char *s2)
 			return (false);
 		++ct;
 	}
+	return (true);
+}
+
+bool	ft_strcmp(char *s1, char *s2)
+{
+	size_t	ct;
+
+	ct = 0;
+	while (s1[ct] || s2[ct])
+	{
+		if (s1[ct] != s2[ct])
+			return (false);
+		++ct;
+	}
+	if (s1[ct] != s2[ct])
+		return (false);
 	return (true);
 }

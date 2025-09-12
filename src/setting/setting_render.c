@@ -6,12 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:05:29 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 19:25:42 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 16:43:22 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 #include "../include/utils.h"
+#include "../include/turbolibx.h"
+#include "../include/setting.h"
 
 int	setting_render(t_control *ctrl)
 {
@@ -24,16 +26,14 @@ int	setting_render(t_control *ctrl)
 	{
 		mlx_mouse_get_pos(ctrl->win->ml, ctrl->win->win,
 			&ctrl->setting->x_mouse, &ctrl->setting->y_mouse);
-//		menu_animation_button(ctrl);
 		ctrl->setting->time = time;
-//		mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
-//			ctrl->setting->background[ctrl->setting->actual_frame], 0, 0);
-		if (ctrl->setting->background->frame_actual < 6)
-			++ctrl->setting->background->frame_actual;
-		else
-			ctrl->setting->background->frame_actual = 0;
+		mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
+			ctrl->setting->background->sprite[ctrl->setting->background->frame_actual],
+			0, 0);
+		setting_button_render(ctrl);
+		increase_animation_frame(ctrl->setting->background);
 	}
-	if (ctrl->setting->statement == 3 || ctrl->setting->statement == 1)
+	if (ctrl->setting->statement == 1)
 		mlx_loop_end(ctrl->win->ml);
 	return (0);
 }

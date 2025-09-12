@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/09/12 13:59:58 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/12 16:36:20 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,8 @@ SRCS		=		src/main.c							\
 					src/raycasting/raycasting.c			\
 														\
 					src/setting/setting_loop.c			\
+					src/setting/setting_button.c		\
+					src/setting/setting_button_render.c	\
 					src/setting/setting_render.c		\
 					src/setting/load_setting.c			\
 					src/setting/mouse_input_setting.c	\
@@ -74,7 +76,11 @@ SRCS		=		src/main.c							\
 					src/turbolibx/animation_frame.c		\
 					src/turbolibx/draw_line.c			\
 					src/turbolibx/load_animation.c		\
+					src/turbolibx/load_font.c			\
 					src/turbolibx/load_image.c			\
+					src/turbolibx/mlx_putkey_code.c		\
+					src/turbolibx/mlx_putnbr.c			\
+					src/turbolibx/mlx_putstr.c			\
 					src/turbolibx/reset_window.c		\
 					src/turbolibx/transparency.c		\
 														\
@@ -84,6 +90,7 @@ SRCS		=		src/main.c							\
 					src/utils/count.c					\
 					src/utils/error.c					\
 					src/utils/get_time.c				\
+					src/utils/print.c					\
 					src/utils/split.c					\
 
 DIR_OBJS 	=		.objs
