@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 21:53:21 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:16:35 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_setting	*load_setting(t_window *win)
 	setting->x_mouse = 0;
 	setting->y_mouse = 0;
 	setting->scroll = 0;
+	setting->bar_click = false;
 	setting->background = load_animation_struct(win,
 			anim_loader(1728, 960, 12,
 				"./texture/home/67787c768fd04be4a212dc45a37ec31c"), 0, 0);

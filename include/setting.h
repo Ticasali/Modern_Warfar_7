@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 08:50:52 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 21:56:38 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:36:46 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_image		*load_setting_bar(t_window *win);
 t_image		*load_setting_bar_b(t_window *win);
 
 int			mouse_input_setting(int button, int x, int y, t_control *ctrl);
+int			mouse_release_setting(int button, int x, int y, t_control *ctrl);
 int			keyboard_input_setting(int keycode, t_control *ctrl);
 int			escape_touch_setting(int keycode, t_control *ctrl);
 int			setting_render(t_control *ctrl);
@@ -30,5 +31,6 @@ void		setting_button_render(t_control *ctrl);
 void		add_node_first_setting(t_image *lst, t_img_loader img, int height, int length);
 void		add_node_setting(t_image *lst, t_img_loader img, int height, int length);
 void		setting_loop(t_control *ctrl);
+void		scrolling_update(t_control *ctrl);
 
 #endif

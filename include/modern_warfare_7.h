@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 20:07:02 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:15:56 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ typedef struct s_setting
 	int			y_mouse;
 	int			scroll;
 	double		time;
+	bool		bar_click;
 	t_anim		*background;
 	t_image		*img;
 	t_image		*bar;

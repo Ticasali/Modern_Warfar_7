@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 21:47:58 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 22:22:58 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:44:17 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,14 @@ t_image	*load_setting_bar_b(t_window *win)
 		return (NULL);
 	add_node_first_setting(ret, img_loader(win, 50, 960,"./texture/setting/bar.xpm"), 1678, 0);
 	return (ret);
+}
+
+void	scrolling_update(t_control *ctrl)
+{
+	if (ctrl->setting->y_mouse <= 225)
+		ctrl->setting->scroll = 0;
+	else if (ctrl->setting->y_mouse >= 755)
+		ctrl->setting->scroll = 550;
+	else
+		ctrl->setting->scroll = ctrl->setting->y_mouse - 225;
 }

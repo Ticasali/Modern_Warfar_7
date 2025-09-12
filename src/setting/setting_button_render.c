@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 16:16:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 22:10:52 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:37:38 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
+#include "../include/setting.h"
 #include "../include/utils.h"
 
 void	setting_button_render(t_control *ctrl)
@@ -18,6 +19,8 @@ void	setting_button_render(t_control *ctrl)
 	t_image	*lst;
 
 	lst = ctrl->setting->img;
+	if (ctrl->setting->bar_click == true)
+		scrolling_update(ctrl);
 	while (lst != NULL)
 	{
 		if (((lst->y - ctrl->setting->scroll) < 960)

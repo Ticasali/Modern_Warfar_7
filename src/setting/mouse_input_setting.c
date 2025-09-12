@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:08 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 22:21:55 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:20:52 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ int	mouse_input_setting(int button, int x, int y, t_control *ctrl)
 		if ((x >= 500 && x <= 600) && (y >= 350 && y <= 400))
 			ctrl->setting->statement = 3;
 		if (x >= 1678)
-		{
-			
-		}
+			ctrl->setting->bar_click = true;
 	}
 	if (button == 4)
 	{
