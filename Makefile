@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 10:05:38 by ticasali          #+#    #+#              #
-#    Updated: 2025/09/12 16:36:20 by ticasali         ###   ########.fr        #
+#    Updated: 2025/09/12 18:02:56 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ SRCS		=		src/main.c							\
 														\
 					src/raycasting/raycasting.c			\
 														\
+					src/setting/keyboard_input_setting.c\
 					src/setting/setting_loop.c			\
 					src/setting/setting_button.c		\
 					src/setting/setting_button_render.c	\

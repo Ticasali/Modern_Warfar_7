@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:04:36 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 22:06:51 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 18:23:30 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	setting_loop(t_control *ctrl)
 	mlx_hook(ctrl->win->win, 2, 1L << 0, escape_touch_setting, ctrl);
 	mlx_hook(ctrl->win->win, ButtonPress,
 		ButtonPressMask, mouse_input_setting, ctrl);
+	mlx_hook(ctrl->win->win, KeyPress, KeyPressMask, keyboard_input_setting ,ctrl);
 	mlx_loop_hook(ctrl->win->ml, setting_render, ctrl);
 	mlx_loop(ctrl->win->ml);
 	if (ctrl->setting->statement == 1)

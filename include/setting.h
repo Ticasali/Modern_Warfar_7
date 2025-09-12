@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 08:50:52 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 16:38:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 18:03:19 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_setting	*load_setting(t_window *win);
 t_image		*load_setting_img(t_window *win);
 
 int			mouse_input_setting(int button, int x, int y, t_control *ctrl);
+int			keyboard_input_setting(int keycode, t_control *ctrl);
 int			escape_touch_setting(int keycode, t_control *ctrl);
 int			setting_render(t_control *ctrl);
 

@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 16:16:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 16:32:14 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 18:27:54 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ void	setting_button_render(t_control *ctrl)
 	lst = ctrl->setting->img;
 	while (lst != NULL)
 	{
-		if (!ft_strcmp(lst->name, "bar") == false
+		if (!ft_strcmp(lst->name, "bar")
 			&& !ft_strcmp(lst->name, "barre"))
 		{
 			if (((lst->y - ctrl->setting->scroll) < 960)
 				&& ((lst->y - ctrl->setting->scroll) > 0))
+			{
 			mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
-				ctrl->setting->background->sprite[ctrl->setting->background->frame_actual],
-				lst->x, lst->y - ctrl->setting->scroll);
+				lst->sprite, lst->x, lst->y - ctrl->setting->scroll);
+			}
 		}
 		else
 		{
 			mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
-				ctrl->setting->background->sprite[ctrl->setting->background->frame_actual],
-				lst->x, lst->y);
+				lst->sprite, lst->x, lst->y);
 		}
 		lst = lst->next;
 	}

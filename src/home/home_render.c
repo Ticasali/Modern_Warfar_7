@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 12:47:38 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 22:01:25 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/12 18:05:09 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	home_render(t_control *ctrl)
 			400, 700);
 		increase_animation_frame(ctrl->home->background);
 	}
-	if (ctrl->home->statement == 3 || ctrl->home->statement == 1)
+	if (ctrl->home->statement == 3 || ctrl->home->statement == 1 || ctrl->home->statement == 2)
 	{
 		mlx_loop_end(ctrl->win->ml);
 	}
