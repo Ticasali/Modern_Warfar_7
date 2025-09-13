@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 16:16:16 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/13 01:37:38 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:31:43 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ void	setting_button_render(t_control *ctrl)
 		}
 		lst = lst->next;
 	}
+	//Print Input
+	//Print Cursor
+	//Print Scroll Bar
 	mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,
 			ctrl->setting->bar_b->sprite, ctrl->setting->bar_b->x, ctrl->setting->bar_b->y);
 	mlx_put_image_to_window(ctrl->win->ml, ctrl->win->win,

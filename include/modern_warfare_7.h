@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:08:09 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/13 01:15:56 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:16:02 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,7 @@ typedef struct s_setting
 	t_image		*img;
 	t_image		*bar;
 	t_image		*bar_b;
+	t_image		*cursor;
 }	t_setting;
 
 typedef struct s_solo

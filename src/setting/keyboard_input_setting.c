@@ -6,13 +6,14 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 17:59:19 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/12 19:56:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 14:08:49 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/modern_warfare_7.h"
 #include "../include/turbolibx.h"
 #include "../include/setting.h"
+#include "../include/utils.h"
 
 int	keyboard_input_setting(int keycode, t_control *ctrl)
 {
@@ -32,5 +33,6 @@ int	keyboard_input_setting(int keycode, t_control *ctrl)
 		else
 			ctrl->setting->scroll = 550;
 	}
+	ft_putnbr(keycode);
 	return (0);
 }

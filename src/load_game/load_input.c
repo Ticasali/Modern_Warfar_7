@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:47:37 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/11 12:56:52 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 14:23:57 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,17 @@ t_input	*load_input(t_window *win)
 	input = malloc(sizeof(t_input));
 	if (input == NULL)
 		return (NULL);
-	input->dash = 0;
-	input->down = 0;
-	input->front = 0;
-	input->hide = 0;
-	input->item1 = 0;
-	input->item2 = 0;
-	input->item3 = 0;
-	input->item4 = 0;
-	input->jump = 0;
-	input->left = 0;
-	input->loading = 0;
-	input->right = 0;
-	input->shoot = 0;
+	input->dash = -2;
+	input->down = 115;
+	input->front = 119;
+	input->item1 = 49;
+	input->item2 = 50;
+	input->item3 = 51;
+	input->item4 = 52;
+	input->jump = 32;
+	input->left = 97;
+	input->loading = 114;
+	input->right = 100;
+	input->shoot = -1;
 	return (input);
 }

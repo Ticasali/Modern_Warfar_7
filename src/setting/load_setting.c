@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 13:06:31 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/13 01:16:35 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:21:50 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_setting	*load_setting(t_window *win)
 	setting->img = load_setting_img(win);
 	setting->bar = load_setting_bar(win);
 	setting->bar_b = load_setting_bar_b(win);
+	setting->cursor = load_setting_cursos(win);
 	return (setting);
 }
 
@@ -58,6 +59,12 @@ t_image	*load_setting_img(t_window *win)
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/left.xpm"), 800, 1000);
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/loading.xpm"), 200, 1200);
 	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/right.xpm"), 800, 1200);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/bar_s.xpm"), 500, 1400);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/sound.xpm"), 200, 1400);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/bar_s.xpm"), 500, 1600);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/bruit.xpm"), 200, 1600);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/save.xpm"), 300, 1800);
+	add_node_setting(ret, img_loader(win, 200, 100,"./texture/setting/reset.xpm"), 900, 1800);
 	return (ret);
 }
 
