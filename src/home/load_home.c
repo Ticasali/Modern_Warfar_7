@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 08:47:47 by ticasali          #+#    #+#             */
-/*   Updated: 2025/09/10 21:58:40 by ticasali         ###   ########.fr       */
+/*   Updated: 2025/09/13 23:49:42 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ t_home	*load_home(t_window *win)
 	home->statement = 0;
 	home->time = get_time();
 	home->background = load_animation_struct(win,
-			anim_loader(1728, 960, 12,
-				"./texture/home/67787c768fd04be4a212dc45a37ec31c"), 0, 0);
+			anim_loader(1728, 960, 99,
+				"./texture/home/21ab12a87a10435cb545700a78e36e83PKmkafRz9VIsCOYa"), 0, 0);
 	home->solo = load_animation_struct(win,
 			anim_loader(400, 100, 5, "./texture/home/solo"), 300, 200);
 	home->multi = load_animation_struct(win,
